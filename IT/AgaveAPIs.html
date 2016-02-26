@@ -1,0 +1,45 @@
+﻿<!--“Third party scripts or code, linked to or referenced from this web site, are licensed to you by the third parties that own such code, not by Microsoft, see ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx.”-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9"> 
+    <title>Interactive Tutorial: JavaScript API for PowerPoint</title>
+    <link rel="stylesheet" type="text/css" href="Content/office.css" />
+    <link rel="stylesheet" type="text/css" href="Content/codemirror.css"/>
+    <link rel="stylesheet" type="text/css" href="Content/app.css" />
+    <link rel="stylesheet" type="text/css" href="Content/default.css" />
+    <link href="Content/OfficeThemes.css" rel="stylesheet" />
+    <!--<script src="https://osf-agave/office/lib/1.1/office.debug.js"></script>-->
+	<script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.debug.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js"></script>
+    <script src="Scripts/codemirror.js"></script>
+    <script src="Scripts/javascript.js"></script>
+    <script src="Scripts/OfficeThemeManager.js"></script>
+    <script src="Scripts/interactivesdk.js"></script>
+  </head>
+  <body>    
+    <div class="divWrapperOutside">       
+    <div class="divWrapperInsider">
+         <div id="headercontent" class="ms-contentAccent1-color listHeader">
+             <h1>Select a Tutorial</h1>             
+        </div>
+        <div id="content">
+            <h1>Loading...</h1>
+        </div>
+        <div id="navigation">
+                <button id="run" class="buttonclass" accesskey="R"><u>R</u>un Code</button> 
+                <div id="next" role="button" tabindex="0" title='Go to the next step'>
+                    <div id="nextlabel"><p>Next Step</p></div>
+                    <img src="Images/next.png" alt="Next" />
+                </div> 
+            </div>
+            <div class="toast" id="toastMessage">
+                <div class="closeBtn"><img id="closeImage" src="Images/closeblack.png" role="button" tabindex="0" alt="Close" /></div>
+                <div id="message"></div>
+    </div>
+    </div>
+
+         </body>
+</html>

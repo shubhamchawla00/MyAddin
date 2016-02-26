@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<code>
+    <task id="writeItemSelectedDataText">
+     
+        <![CDATA[
+/* Select some text in either body or subject of the email and click Run Code to replace it */
+
+Office.context.mailbox.item.setSelectedDataAsync("Hello World!", function (asyncResult) {
+  if (asyncResult.status == "failed") {
+    showMessage("Action failed with error: " + asyncResult.error.message);
+  }
+});
+        ]]>
+    
+    </task>
+    <task id="readItemSelectedDataText">
+    
+        <![CDATA[
+/* Select some text in either body or subject of the email and click Run Code to retrieve it */
+
+Office.context.mailbox.item.getSelectedDataAsync("text", function (asyncResult) {
+  if (asyncResult.status == "failed") {
+    showMessage("Action failed with error: " + asyncResult.error.message);
+  }
+  else {
+    showMessage("Selected data: " + asyncResult.value);
+  }
+});
+        ]]>
+      
+    </task>
+  <task id="writeBodySelectedDataText">
+
+    <![CDATA[
+/* Select some text in body of the email and click Run Code to replace it */
+
+Office.context.mailbox.item.body.setSelectedDataAsync("Hello World!", function (asyncResult) {
+  if (asyncResult.status == "failed") {
+    showMessage("Action failed with error: " + asyncResult.error.message);
+  }
+});
+        ]]>
+
+  </task>
+  <task id="bodyPrependText">
+
+    <![CDATA[
+/* Select some text in body of the email and click Run Code to retrieve it */
+
+Office.context.mailbox.item.body.prependAsync("Sounders rule!", function (asyncResult) {
+  if (asyncResult.status == "failed") {
+    showMessage("Action failed with error: " + asyncResult.error.message);
+  }
+});
+        ]]>
+
+  </task>
+
+  <task id="bodyGetType">
+
+    <![CDATA[
+/* Get the type of the email body */
+
+Office.context.mailbox.item.body.getTypeAsync(function (asyncResult) {
+  if (asyncResult.status == "failed") {
+    showMessage("Action failed with error: " + asyncResult.error.message);
+  }
+  else {
+    showMessage("Body type: " + asyncResult.value);
+  }
+});
+        ]]>
+
+  </task>
+
+
+
+  <task id="displayReply">
+
+      <![CDATA[
+Office.context.mailbox.item.displayReplyForm("Thanks for your message, this is my reply...");
+        ]]>
+
+    </task>
+
+    <task id="displayReplyAll">
+
+      <![CDATA[
+Office.context.mailbox.item.displayReplyAllForm("Thanks for your message, this is my reply to ALL of you...");
+        ]]>
+
+    </task>
+
+
+
+    <task id="displayReplyWithAttachments">
+
+      <![CDATA[  
+Office.context.mailbox.item.displayReplyForm(
+{
+	htmlBody : "This is a reply with file attachments",
+	attachments :
+	[
+		{ type: "file", url: "http://i.imgur.com/9S36xvA.jpg", name: "dog.jpg" },
+		{ type: "item", itemId : Office.context.mailbox.item.itemId, name: "test_email.msg" }
+	],
+	options : { asyncContext: null },
+	callback : function (asyncResult)
+	{
+		if (asyncResult.status == "failed")
+		{
+			showMessage("Action failed with error: " + asyncResult.error.message);
+		}
+	}
+});
+        ]]>
+
+    </task>
+    <task id="displayReplyAllWithAttachments">
+
+      <![CDATA[
+Office.context.mailbox.item.displayReplyAllForm(
+{
+	htmlBody : "This is a reply with file attachments",
+	attachments :
+	[
+		{ type: "file", url: "http://i.imgur.com/0Uqqeqa.jpg", name: "dog.jpg" },
+		{ type: "item", itemId: Office.context.mailbox.item.itemId, name: "test_email.msg" }
+	],
+	options : { asyncContext: null },
+	callback : function (asyncResult)
+	{
+		if (asyncResult.status == "failed")
+		{
+			showMessage("Action failed with error: " + asyncResult.error.message);
+		}
+	}
+});
+        ]]>
+
+    </task>
+  <task id="trackMessage">
+
+    <![CDATA[  
+/* Click Run Code to track message */
+
+Office.context.mailbox.item.trackAsync([ "itemSent" ], function (asyncResult) {
+  if (asyncResult.status == "failed") {
+    showMessage("Action failed with error: " + asyncResult.error.message);
+  }
+  else {
+    showMessage("Action succeeded, message is tracked.");
+  }
+});
+        ]]>
+
+  </task>
+  <task id="trackMessageAndNotify">
+
+    <![CDATA[  
+/* Click Run Code to track message and subscribe to notifications */
+
+Office.context.mailbox.item.trackAndNotifyAsync([ "itemSent" ], "https://contoso.com/app/notifications", function (asyncResult) {
+  if (asyncResult.status == "failed") {
+    showMessage("Action failed with error: " + asyncResult.error.message);
+  }
+  else {
+    showMessage("Action succeeded, message is tracked, with notifications to provided URL.");
+  }
+});
+        ]]>
+
+  </task>
+  <task id="getSubject">
+
+    <![CDATA[  
+/* Click Run Code to get message subject */
+
+if (Office.context.mailbox.item.subject.getAsync) {
+  Office.context.mailbox.item.subject.getAsync(function (asyncResult) {
+    if (asyncResult.status == "failed") {
+      showMessage("Action failed with error: " + asyncResult.error.message);
+    }
+    else {
+      showMessage("Composed subject is: " + asyncResult.value);
+    }
+  });
+}
+else {
+  showMessage("Subject is: " + Office.context.mailbox.item.subject);
+}
+        ]]>
+
+  </task>
+  <task id="dumpIds">
+
+    <![CDATA[  
+/* Click Run Code to dump available EWS IDs */
+
+showMessage("EWS ID: " + Office.context.mailbox.item.itemId);
+showMessage("Conversation ID: " + Office.context.mailbox.item.conversationId);
+        ]]>
+
+  </task>
+  <task id="sendMessage">
+
+    <![CDATA[  
+/* Click Run Code to send a message to yourself */
+
+var request = '<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">'+
+	'  <soap:Header><t:RequestServerVersion Version="Exchange2010" /></soap:Header>'+
+	'  <soap:Body>'+
+	'    <m:CreateItem MessageDisposition="SendAndSaveCopy">'+
+	'      <m:SavedItemFolderId><t:DistinguishedFolderId Id="sentitems" /></m:SavedItemFolderId>'+
+	'      <m:Items>'+
+	'        <t:Message>'+
+	'          <t:Subject>Hello, Outlook!</t:Subject>'+
+	'          <t:Body BodyType="HTML">This message was sent from &quot;Agave APIs&quot; app&apos;s &lt;font color=green&gt;&lt;b&gt;Make EWS calls&lt;/b&gt;&lt;/font&gt; tutorial used from ' + Office.context.mailbox.diagnostics.hostName + ', version ' + Office.context.mailbox.diagnostics.hostVersion + '!</t:Body>'+
+	'          <t:ToRecipients>'+
+	'            <t:Mailbox><t:EmailAddress>' + Office.context.mailbox.userProfile.emailAddress + '</t:EmailAddress></t:Mailbox>'+
+	'          </t:ToRecipients>'+
+	'        </t:Message>'+
+	'      </m:Items>'+
+	'    </m:CreateItem>'+
+	'  </soap:Body>'+
+	'</soap:Envelope>';
+
+Office.context.mailbox.makeEwsRequestAsync(request, function (asyncResult) {
+  if (asyncResult.status == "failed") {
+    showMessage("Action failed with error: " + asyncResult.error.message);
+  }
+  else {
+    showMessage("Message sent!");
+  }
+});
+        ]]>
+
+  </task>
+  <task id="setSubject">
+
+    <![CDATA[  
+/* Click Run Code to set message subject, supported in message compose only */
+
+Office.context.mailbox.item.subject.setAsync("New subject!", function (asyncResult) {
+  if (asyncResult.status == "failed") {
+    showMessage("Action failed with error: " + asyncResult.error.message);
+  }
+});
+        ]]>
+
+  </task>
+  <task id="setSettings">
+
+    <![CDATA[  
+/* Click Run Code to set a setting */
+
+ // Set a setting in the mailbox
+ Office.context.roamingSettings.set("mySetting", "mySetting value");
+        ]]>
+
+  </task>
+  <task id="getSettings">
+
+    <![CDATA[  
+/* Click Run Code to get a setting */
+
+//Get a setting previously set in the mailbox
+var settingsValue = Office.context.roamingSettings.get("mySetting");
+showMessage("mySetting value is: " + settingsValue);
+        ]]>
+
+  </task>
+  <task id="saveSettings">
+
+    <![CDATA[  
+/* Click Run Code to save a setting in the mailbox */
+
+//Save a setting in the mailbox to make it available in future sessions
+Office.context.roamingSettings.saveAsync(function (asyncResult) {
+		 if (asyncResult.status == "failed") {
+			showMessage("Action failed with error: " + asyncResult.error.message);
+         }
+		 else {
+			 showMessage("Settings saved with status: " + asyncResult.status);
+		 }
+});
+        ]]>
+
+  </task>
+</code>
+

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp
+	xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+	xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides"
+	xsi:type="MailApp">
+	<Id>{57C8B4A1-57EA-473B-A926-9A04EFEBBFDB}</Id>
+	<Version>1.0</Version>
+	<ProviderName>Microsoft</ProviderName>
+	<DefaultLocale>en-us</DefaultLocale>
+	<DisplayName DefaultValue="Outlook App Command Test" />
+	<Description DefaultValue="Test add-in for outlooks app commands" />
+	<IconUrl DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/aeroplane_32_32.png" />
+	<HighResolutionIconUrl DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/aeroplane_64_64.png" />
+	<Requirements>
+		<Sets DefaultMinVersion="1.1">
+			<Set Name="Mailbox" />
+		</Sets>
+	</Requirements>
+	
+	<!-- Old schema. This will be overridden by the VersionOverrides below. -->
+	<FormSettings>
+		<Form xsi:type="ItemRead">
+			<DesktopSettings>
+				<SourceLocation DefaultValue="https://example.com/" />
+				<RequestedHeight>150</RequestedHeight>
+			</DesktopSettings>
+		</Form>
+	</FormSettings>
+	<Permissions>ReadWriteMailbox</Permissions>
+	<Rule xsi:type="RuleCollection" Mode="Or">
+		<Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
+	</Rule>
+	<DisableEntityHighlighting>true</DisableEntityHighlighting>
+	<!-- /Old schema. -->
+
+	<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+
+		<Description resid="residAppDescription" />
+
+		<Requirements>
+			<bt:Sets DefaultMinVersion="1.3">
+				<bt:Set Name="Mailbox" />
+			</bt:Sets>
+		</Requirements>
+
+		<Hosts>
+			<Host xsi:type="MailHost">
+				<DesktopFormFactor>
+					<FunctionFile resid="residUILessFunctionFileUrl" />
+					<ExtensionPoint xsi:type="MessageReadCommandSurface">
+						<!-- ExtensionPoints : MessageReadCommandSurface, MessageComposeCommandSurface, AppointmentAttendeeCommandSurface, AppointmentOrganizerCommandSurface --> 
+						<OfficeTab id="TabDefault">
+							<Group id="msgreadTabMessage.grp1">
+								<Label resid="residAppName" />
+								<Tooltip resid="residAppDescription" />
+
+								<Control xsi:type="Button" id="TaskPane0Btn">
+									<Label resid="residTaskPaneButton0Name" />
+									<Tooltip resid="residTaskPaneButton0Name" />
+									<Supertip>
+										<Title resid="residTaskPaneButton0Name" />
+										<Description resid="residTPBtn0SupertipDescr" />
+									</Supertip>
+									<Icon>
+										<bt:Image size="16" resid="tp0icon" />
+										<bt:Image size="32" resid="tp0icon" />
+										<bt:Image size="80" resid="tp0icon" />
+									</Icon>
+									<Action xsi:type="ShowTaskpane">
+										<SourceLocation resid="residTaskpaneUrl" />
+									</Action>
+								</Control>
+								
+								<Control xsi:type="Button" id="UILess0Btn">
+									<Label resid="residUILessButton0Name" />
+									<Tooltip resid="residUILessButton0Name" />
+									<Supertip>
+										<Title resid="residUILessButton0Name" />
+										<Description resid="residUILBtn0SupertipDescr" />
+									</Supertip>
+									<Icon>
+										<bt:Image size="16" resid="ul0icon" />
+										<bt:Image size="32" resid="ul0icon" />
+										<bt:Image size="80" resid="ul0icon" />
+									</Icon>
+									<Action xsi:type="ExecuteFunction">
+										<FunctionName>uilessAddNotification</FunctionName>
+									</Action>
+								</Control>
+								
+								<Control xsi:type="Button" id="TutorialBtn">
+									<Label resid="residTutorialButton0Name" />
+									<Tooltip resid="residTutorialButton0Name" />
+									<Supertip>
+										<Title resid="residTutorialButton0Name" />
+										<Description resid="residTutorialBtn0SupertipDescr" />
+									</Supertip>
+									<Icon>
+										<bt:Image size="16" resid="tutorialicon" />
+										<bt:Image size="32" resid="tutorialicon" />
+										<bt:Image size="80" resid="tutorialicon" />
+									</Icon>
+									<Action xsi:type="ShowTaskpane">
+										<SourceLocation resid="residTutorialUrl" />
+									</Action>
+								</Control>
+
+							</Group>
+						</OfficeTab>		  
+					</ExtensionPoint>
+				</DesktopFormFactor>
+			</Host>
+		</Hosts>
+
+		<Resources>
+			<bt:Images>
+				<bt:Image id="tp0icon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/taskpane0_32_32.png"></bt:Image>
+				<bt:Image id="ul0icon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/uiless0_32_32.png"></bt:Image>
+				<bt:Image id="tutorialicon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/tutorial_96_96.png"></bt:Image>
+				<bt:Image id="informationicon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/informationIcon.png"></bt:Image>
+			</bt:Images>
+			<bt:Urls>
+				<bt:Url id="residUILessFunctionFileUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/uiless.html"></bt:Url>
+				<bt:Url id="residTaskpaneUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/taskpane.html"></bt:Url>
+				<bt:Url id="residTutorialUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/IT/AgaveAPIs.html"></bt:Url>
+			</bt:Urls>
+			<bt:ShortStrings>
+				<bt:String id="residAppName" DefaultValue="OlkACTest"></bt:String>
+				<bt:String id="residUILessButton0Name" DefaultValue="UILess"></bt:String>
+				<bt:String id="residTaskPaneButton0Name" DefaultValue="Taskpane"></bt:String>
+				<bt:String id="residTutorialButton0Name" DefaultValue="Tutorial"></bt:String>
+			</bt:ShortStrings>
+			<bt:LongStrings>
+				<bt:String id="residAppDescription" DefaultValue="Outlook App Command Test"></bt:String>
+				<bt:String id="residUILBtn0SupertipDescr" DefaultValue="Run UILess"></bt:String>
+				<bt:String id="residTPBtn0SupertipDescr" DefaultValue="Launch Taskpane"></bt:String>
+				<bt:String id="residTutorialBtn0SupertipDescr" DefaultValue="Launch API Tutorial"></bt:String>
+			</bt:LongStrings>
+		</Resources>
+
+	</VersionOverrides>
+</OfficeApp>

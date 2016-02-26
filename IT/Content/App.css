@@ -1,0 +1,373 @@
+﻿html, body {
+    height: 100%;
+    font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+    overflow-y: auto;
+cursor:cell;
+}
+
+#APILayout {
+   width:100%;
+}
+
+#content {
+    position: absolute;
+    top:60px;
+    bottom:45px;
+    left:0px;
+    right:0px;
+    padding-right:20px;
+    padding-left:20px;
+    overflow:hidden;
+}
+
+#scenario{
+    z-index:0;
+    width:100%;
+    position:relative;
+    float:left;
+}
+
+#scenarioimg {
+    position:relative;
+    float:left;
+    padding-top:25px;
+    padding-right:15px;
+    
+}
+
+#scenarioimg img {
+    cursor:pointer;
+}
+
+#scenariolabel h4 {
+    margin-top:15px;
+    margin-bottom:0px;
+}
+
+#task {
+    padding-left:45px;
+}
+
+#task h3 {
+    margin-top:0px;
+}
+
+#toastMessage {
+    position: absolute;
+    height: 150px;
+    right:0px;
+    left: 0px;
+    z-index: 100;
+    background-color: #EFEBEF;
+    bottom: 0px;
+    display: none;
+    border-top-style:solid;
+    border-top-width:1px;
+    border-top-color:#cac5c5;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-break: break-all;
+}
+
+#message {   
+    font-size: medium;
+    padding-left:20px;
+    color: #858484;
+    font-size:15px;
+   
+}
+
+.divWrapperOutside {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cac5c5;
+    position:absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.divWrapperInside {
+    position: relative;
+    height: 100%;
+}
+
+.toast .closeBtn {
+    width: 100%;
+    margin-bottom:15px;  
+}
+
+#closeImage {
+    float:right;
+    cursor: pointer;
+    margin-top:1px;
+    margin-right:1px;
+}
+
+#headercontent {
+    z-index:1000;
+    height:80px;
+    position:absolute;
+    top:0;
+    left: 0px;
+    right: 0px;
+    padding-left:20px;
+    overflow:hidden;
+}
+
+#introText {
+    font-size:13px;
+    padding-bottom:5px;
+}
+
+#title {
+   margin-top:25px;
+}
+
+li.listItem {
+    height:80px;
+    width:120px;
+    display:inline-table;
+    margin-right:10px;
+    margin-bottom:10px;
+    color:white;
+}
+
+li.listItem:focus {
+    -webkit-box-shadow:inset 0px 0px 0px 3px #000;
+    -moz-box-shadow:inset 0px 0px 0px 3px #000;
+    box-shadow:inset 0px 0px 0px 3px #000;
+}
+
+li.listItem img {
+    position:relative;
+    float:right;
+}
+
+li.listItem:hover{
+    cursor:pointer;
+    background-color:black;
+}
+
+.listText {
+    width:115px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.navigationButtons {
+    float:right;
+}
+
+#next {
+    color: #337147;
+    cursor: pointer;
+    position: relative;
+    float: right;
+}
+
+#nextlabel {
+    float: left;
+    padding-top: 3px;
+    margin-right: 10px;
+}
+
+#nextlabel p {
+    margin-bottom:0px;
+    margin-top:0px;
+    font-size:15px;
+}
+
+#next:hover {
+    color:#43945d;
+}
+
+#next img {
+    cursor:pointer;  
+    height: 30px;
+    width: 30px;
+}
+
+#previous {
+    color:#337147;
+    position:relative; 
+    cursor:pointer;
+    margin-right: 10px; 
+    float:left;
+}
+
+#previous img {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+
+#previous:hover {
+    color:#43945d;
+}
+
+#previouslabel p {
+   margin-bottom:0px;
+   margin-top:0px;
+   font-size:15px;
+}
+
+li.listItem h2 {
+    margin-bottom: 0px;
+    height: 44px;
+}
+
+.buttonclass {
+    padding-top: 2px;
+    float: left;
+    background-color:#f2eded;
+    color: #2e2c2c;
+    padding: 5px 10px 5px 10px;
+    font-family:Segoe UI, Tahoma, Verdana, sans-serif;
+    border:solid;
+    border-color:#9E9E9E;
+    border-width:1px;
+    cursor:pointer;
+}
+
+#codeLayout {
+    border:solid;
+    border-color:#e8e6e6;
+    border-width:1px;
+}
+
+#codeLayout input, textarea {
+    height:100px;
+    width:99%; 
+    margin-top:5px;
+    font-family:monospace;
+    border:solid;
+    border-color:#9E9E9E;
+    border-width:1px;
+}
+
+#navigation {
+    position:absolute;
+    bottom:10px;
+    left:20px;
+    right:25px;
+    height:35px;
+    display: none;
+    
+}
+
+.navimages {
+    height:30px;    
+    cursor:pointer;
+    position:relative;
+    float:right;
+    padding-left:10px;
+}
+
+#description {
+    margin-top:0px;
+    height:100%;
+    overflow-y:auto;
+}
+
+#description a{   
+}
+
+#sceanrioList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#summary {
+    height:200px;
+}
+
+#tabs {
+    width: 100%;
+}
+
+#codeMenu {
+    display:inline; 
+    list-style:none; 
+    padding-right:10px;
+}
+
+#codeMenu a, #descriptionMenu a {
+    color:#767676; 
+    font-weight:normal;
+}
+
+#codeMenu.tabSelected a, #descriptionMenu.tabSelected a {
+    font-weight:600;
+}
+
+#descriptionMenu {
+    display:inline; 
+    list-style:none;
+
+}
+
+#codeWindow {
+    visibility:hidden;
+    display:none;
+}
+
+#navigation h2 {
+    margin-top:0px;
+}
+
+#headercontent.listHeader {
+    background-color:white;
+    padding-top:10px;
+    height:50px;
+}
+
+#content.list {
+    padding-top:0px;
+    margin-top:0px;
+    padding-left: 10px;
+    bottom: 0px;
+}
+
+#content.listPageContent {
+    margin-top: 0px;
+    padding-left: 10px;
+    bottom: 0px;
+    overflow-y:auto;
+}
+
+#content.apiPageContent {
+    margin-top: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+    bottom: 45px;
+}
+
+#headercontent.tutorialpage {
+    background-color: #337147;
+    color: white;
+    height:80px;
+}
+
+#content.APIPage1 {
+    margin-top: 0;
+    padding-right: 30px;
+    padding-left: 20px;
+    bottom: 45px;
+}
+
+#codeMenu a.selected {
+     color: #337147;
+     font-weight: 600;
+
+}
+
+.whiteText {
+    color:white;
+}
+
+.cssPage {
+    overflow: scroll !important;
+}
