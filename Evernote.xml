@@ -1,0 +1,326 @@
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="MailApp">
+  <Id>C427FF10-F2AA-43DB-A07C-3BC19296E937</Id>
+  <Version>1.6.0</Version>
+  <ProviderName>Evernote</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Evernote">
+    <Override Locale="da" Value="Evernote" />
+    <Override Locale="de" Value="Evernote" />
+    <Override Locale="es" Value="Evernote" />
+    <Override Locale="fi" Value="Evernoteen" />
+    <Override Locale="fr" Value="Evernote" />
+    <Override Locale="hu" Value="Evernote-ba" />
+    <Override Locale="id" Value="Evernote" />
+    <Override Locale="it" Value="Evernote" />
+    <Override Locale="ja" Value="Evernote" />
+    <Override Locale="ko" Value="Evernote" />
+
+    <Override Locale="nb" Value="Evernote" />
+    <Override Locale="nl" Value="Evernote" />
+    <Override Locale="pl" Value="Evernote" />
+    <Override Locale="pt" Value="Evernote" />
+    <Override Locale="pt-BR" Value="Evernote" />
+    <Override Locale="ro" Value="Evernote" />
+    <Override Locale="ru" Value="Evernote" />
+    <Override Locale="sr" Value="Evernote" />
+    <Override Locale="sv" Value="Evernote" />
+    <Override Locale="th" Value="Evernote" />
+    <Override Locale="tr" Value="Evernote" />
+    <Override Locale="vi" Value="Evernote" />
+    <Override Locale="zh-CN" Value="印象笔记" />
+    <Override Locale="zh-TW" Value="Evernote" />
+  </DisplayName>
+  <Description DefaultValue="Tame your inbox. Save important email to a workspace where ideas go from projects to completion.">
+    <Override Locale="da" Value="Gem vigtige e-mails i arbejdsområdet, hvor idéer gå fra at være projekter til at blive færdiggjorte." />
+    <Override Locale="de" Value="Speichere wichtige E-Mails in einem Arbeitsbereich, in dem sich Ideen Abschluss entwickeln." />
+    <Override Locale="es" Value="Guarda correos electrónicos importantes en un espacio de trabajo donde las ideas y se completan." />
+    <Override Locale="fi" Value="Tallenna tärkeät sähköpostit työtilaan, missä ideat muuttuvat projekteista valmiiksi tuotteiksi." />
+    <Override Locale="fr" Value="Enregistrez des emails importants dans un espace de travail où les idées réalité." />
+    <Override Locale="hu" Value="Tame your inbox. Save important email to a workspace where ideas go from projects to completion." />
+    <Override Locale="id" Value="Simpan email penting ke ruang kerja tempat ide-ide berubah dari proyek sampai selesai." />
+    <Override Locale="it" Value="Salva le email importanti in uno spazio di lavoro dove le idee si trasformano a realizzazioni." />
+    <Override Locale="ja" Value="メール受信箱をスッキリ整理。重要なメールは、仕事の作業を行うワークスペースに保管しておけば安心です。" />
+    <Override Locale="ko" Value="받은편지함을 정리하세요. 중요한 이메일을 업무 공간에 저장해 프로젝트 완료 시까지 아이디어의 발전 과정을 한눈에 파악하세요." />
+    <Override Locale="nb" Value="Tame your inbox. Save important email to a workspace where ideas go from projects to completion." />
+    <Override Locale="nl" Value="Tem je inbox. Sla belangrijke e-mails op in een werkplek waar ideeën afgeronde projecten worden." />
+    <Override Locale="pl" Value="Zapisz ważne wiadomości w miejscu, w którym realizują się Twoje pomysły." />
+    <Override Locale="pt" Value="Tame your inbox. Save important email to a workspace where ideas go from projects to completion." />
+    <Override Locale="pt-BR" Value="Salve e-mails importantes para um espaço de trabalho onde as idéias vão desde a sua conclusão." />
+    <Override Locale="ro" Value="Tame your inbox. Save important email to a workspace where ideas go from projects to completion." />
+    <Override Locale="ru" Value="Сохраняйте важные письма в рабочем пространстве, где идеи преобразуются из проектов в результат." />
+    <Override Locale="sr" Value="Tame your inbox. Save important email to a workspace where ideas go from projects to completion." />
+    <Override Locale="sv" Value="Spara viktiga e-postmeddelanden på arbetsytan där projekt går från att vara idéer till slutförande." />
+    <Override Locale="th" Value="บันทึกอีเมลที่สำคัญลงในพื้นที่ทำงานส่วนตัวที่คุณจะนำไอเดียต่าง ไปใช้ได้ตั้งแต่เริ่มต้นจนงานเสร็จสิ้น" />
+    <Override Locale="tr" Value="Önemli e-postaları, fikirlerin projelerden tamamlanmış işlere dönüştüğü bir alanına kaydedin." />
+    <Override Locale="vi" Value="Lưu email quan trọng vào một không gian làm việc có thể giúp hoàn tất các ý tưởng dành cho dự án." />
+    <Override Locale="zh-CN" Value="Tame your inbox. Save important email to a workspace where ideas go from projects to completion." />
+    <Override Locale="zh-TW" Value="Tame your inbox. Save important email to a workspace where ideas go from projects to completion." />
+  </Description>
+  <IconUrl DefaultValue="https://cdn1.evernote.com/outlook/v1.6/images/app-icon.png" />
+  <HighResolutionIconUrl DefaultValue="https://cdn1.evernote.com/outlook/v1.6/images/app-icon-hires.png" />
+  <SupportUrl DefaultValue="https://support.evernote.com" />
+  <Hosts>
+    <Host Name="Mailbox" />
+  </Hosts>
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="Mailbox" />
+    </Sets>
+  </Requirements>
+
+  <!-- Old schema. This will be overridden by the VersionOverrides below. -->
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://cdn1.evernote.com/outlook/v1.6/html/home-read.html" />
+        <RequestedHeight>350</RequestedHeight>
+      </DesktopSettings>
+      <TabletSettings>
+        <SourceLocation DefaultValue="https://cdn1.evernote.com/outlook/v1.6/html/home-read.html?mobile" />
+        <RequestedHeight>350</RequestedHeight>
+      </TabletSettings>
+      <PhoneSettings>
+        <SourceLocation DefaultValue="https://cdn1.evernote.com/outlook/v1.6/html/home-read.html?mobile" />
+      </PhoneSettings>
+    </Form>
+    <Form xsi:type="ItemEdit">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://cdn1.evernote.com/outlook/v1.6/html/home-compose.html" />
+      </DesktopSettings>
+      <TabletSettings>
+        <SourceLocation DefaultValue="https://cdn1.evernote.com/outlook/v1.6/html/home-compose.html?mobile" />
+      </TabletSettings>
+      <PhoneSettings>
+        <SourceLocation DefaultValue="https://cdn1.evernote.com/outlook/v1.6/html/home-compose.html?mobile" />
+      </PhoneSettings>
+    </Form>
+  </FormSettings>
+  <Permissions>ReadWriteMailbox</Permissions>
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="ReadOrEdit" />
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="ReadOrEdit" />
+  </Rule>
+  <!-- /Old schema. -->
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+
+    <Description resid="residAppDescription" />
+
+    <Requirements>
+      <bt:Sets DefaultMinVersion="1.3">
+        <bt:Set Name="Mailbox" />
+      </bt:Sets>
+    </Requirements>
+
+    <Hosts>
+      <Host xsi:type="MailHost">
+        <DesktopFormFactor>
+
+          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="msgReadTabMessage.grp1">
+
+                <Label resid="residAppName" />
+                <Tooltip resid="residAppDescription" />
+
+                <Control xsi:type="Button" id="TaskPane0BtnRead">
+                  <Label resid="residTaskPaneButton0Name" />
+                  <Tooltip resid="residTaskPaneButton0Name" />
+                  <Supertip>
+                    <Title resid="residTaskPaneButton0Name" />
+                    <Description resid="residReadSupertip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="tp16icon" />
+                    <bt:Image size="32" resid="tp32icon" />
+                    <bt:Image size="80" resid="tp80icon" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="residTaskpaneUrl" />
+                  </Action>
+                </Control>
+
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+
+          <ExtensionPoint xsi:type="MessageComposeCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="msgComposeTabMessage.grp1">
+
+                <Label resid="residAppName" />
+                <Tooltip resid="residAppDescription" />
+
+                <Control xsi:type="Button" id="TaskPane0BtnCompose">
+                  <Label resid="residTaskPaneButton0Name" />
+                  <Tooltip resid="residTaskPaneButton0Name" />
+                  <Supertip>
+                    <Title resid="residTaskPaneButton0Name" />
+                    <Description resid="residComposeSupertip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="tp16icon" />
+                    <bt:Image size="32" resid="tp32icon" />
+                    <bt:Image size="80" resid="tp80icon" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="residTaskpaneComposeUrl" />
+                  </Action>
+                </Control>
+
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <Resources>
+      <bt:Images>
+        <bt:Image id="tp16icon" DefaultValue="https://cdn1.evernote.com/outlook/v1.6/images/app-icon-16.png" />
+        <bt:Image id="tp32icon" DefaultValue="https://cdn1.evernote.com/outlook/v1.6/images/app-icon-32.png" />
+        <bt:Image id="tp80icon" DefaultValue="https://cdn1.evernote.com/outlook/v1.6/images/app-icon-80.png" />
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="residTaskpaneUrl" DefaultValue="https://cdn1.evernote.com/outlook/v1.6/html/home-read.html" />
+        <bt:Url id="residTaskpaneComposeUrl" DefaultValue="https://cdn1.evernote.com/outlook/v1.6/html/home-compose.html" />
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="residAppName" DefaultValue="Evernote">
+          <bt:Override Locale="da" Value="Evernote" />
+          <bt:Override Locale="de" Value="Evernote" />
+          <bt:Override Locale="es" Value="Evernote" />
+          <bt:Override Locale="fi" Value="Evernoteen" />
+          <bt:Override Locale="fr" Value="Evernote" />
+          <bt:Override Locale="hu" Value="Evernote-ba" />
+          <bt:Override Locale="id" Value="Evernote" />
+          <bt:Override Locale="it" Value="Evernote" />
+          <bt:Override Locale="ja" Value="Evernote" />
+          <bt:Override Locale="ko" Value="Evernote" />
+          <bt:Override Locale="nb" Value="Evernote" />
+          <bt:Override Locale="nl" Value="Evernote" />
+          <bt:Override Locale="pl" Value="Evernote" />
+          <bt:Override Locale="pt" Value="Evernote" />
+          <bt:Override Locale="pt-BR" Value="Evernote" />
+          <bt:Override Locale="ro" Value="Evernote" />
+          <bt:Override Locale="ru" Value="Evernote" />
+          <bt:Override Locale="sr" Value="Evernote" />
+          <bt:Override Locale="sv" Value="Evernote" />
+          <bt:Override Locale="th" Value="Evernote" />
+          <bt:Override Locale="tr" Value="Evernote" />
+          <bt:Override Locale="vi" Value="Evernote" />
+          <bt:Override Locale="zh-CN" Value="印象笔记" />
+          <bt:Override Locale="zh-TW" Value="Evernote" />
+       </bt:String>
+        <bt:String id="residTaskPaneButton0Name" DefaultValue="Evernote">
+          <bt:Override Locale="da" Value="Evernote" />
+          <bt:Override Locale="de" Value="Evernote" />
+          <bt:Override Locale="es" Value="Evernote" />
+          <bt:Override Locale="fi" Value="Evernoteen" />
+          <bt:Override Locale="fr" Value="Evernote" />
+          <bt:Override Locale="hu" Value="Evernote-ba" />
+          <bt:Override Locale="id" Value="Evernote" />
+          <bt:Override Locale="it" Value="Evernote" />
+          <bt:Override Locale="ja" Value="Evernote" />
+          <bt:Override Locale="ko" Value="Evernote" />
+          <bt:Override Locale="nb" Value="Evernote" />
+          <bt:Override Locale="nl" Value="Evernote" />
+          <bt:Override Locale="pl" Value="Evernote" />
+          <bt:Override Locale="pt" Value="Evernote" />
+          <bt:Override Locale="pt-BR" Value="Evernote" />
+          <bt:Override Locale="ro" Value="Evernote" />
+          <bt:Override Locale="ru" Value="Evernote" />
+          <bt:Override Locale="sr" Value="Evernote" />
+          <bt:Override Locale="sv" Value="Evernote" />
+          <bt:Override Locale="th" Value="Evernote" />
+          <bt:Override Locale="tr" Value="Evernote" />
+          <bt:Override Locale="vi" Value="Evernote" />
+          <bt:Override Locale="zh-CN" Value="印象笔记" />
+          <bt:Override Locale="zh-TW" Value="Evernote" />
+        </bt:String>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="residAppDescription" DefaultValue="Evernote">
+          <bt:Override Locale="da" Value="Evernote" />
+          <bt:Override Locale="de" Value="Evernote" />
+          <bt:Override Locale="es" Value="Evernote" />
+          <bt:Override Locale="fi" Value="Evernoteen" />
+          <bt:Override Locale="fr" Value="Evernote" />
+          <bt:Override Locale="hu" Value="Evernote-ba" />
+          <bt:Override Locale="id" Value="Evernote" />
+          <bt:Override Locale="it" Value="Evernote" />
+          <bt:Override Locale="ja" Value="Evernote" />
+          <bt:Override Locale="ko" Value="Evernote" />
+          <bt:Override Locale="nb" Value="Evernote" />
+          <bt:Override Locale="nl" Value="Evernote" />
+          <bt:Override Locale="pl" Value="Evernote" />
+          <bt:Override Locale="pt" Value="Evernote" />
+          <bt:Override Locale="pt-BR" Value="Evernote" />
+          <bt:Override Locale="ro" Value="Evernote" />
+          <bt:Override Locale="ru" Value="Evernote" />
+          <bt:Override Locale="sr" Value="Evernote" />
+          <bt:Override Locale="sv" Value="Evernote" />
+          <bt:Override Locale="th" Value="Evernote" />
+          <bt:Override Locale="tr" Value="Evernote" />
+          <bt:Override Locale="vi" Value="Evernote" />
+          <bt:Override Locale="zh-CN" Value="印象笔记" />
+          <bt:Override Locale="zh-TW" Value="Evernote" />
+       </bt:String>
+       <bt:String id="residReadSupertip" DefaultValue="Save to Evernote">
+         <bt:Override Locale="da" Value="Gem til Evernote" />
+         <bt:Override Locale="de" Value="In Evernote speichern" />
+         <bt:Override Locale="es" Value="Guardar en Evernote" />
+         <bt:Override Locale="fi" Value="Tallenna Evernoteen" />
+         <bt:Override Locale="fr" Value="Enregistrer vers Evernote" />
+         <bt:Override Locale="hu" Value="Mentés az Evernote-ba" />
+         <bt:Override Locale="id" Value="Simpan ke Evernote" />
+         <bt:Override Locale="it" Value="Salva in Evernote" />
+         <bt:Override Locale="ja" Value="Evernote に保存" />
+         <bt:Override Locale="ko" Value="Evernote에 저장" />
+         <bt:Override Locale="nb" Value="Save to Evernote" />
+         <bt:Override Locale="nl" Value="In Evernote opslaan" />
+         <bt:Override Locale="pl" Value="Zapisz w Evernote" />
+         <bt:Override Locale="pt" Value="Guardar no Evernote" />
+         <bt:Override Locale="pt-BR" Value="Salvar no Evernote" />
+         <bt:Override Locale="ro" Value="Salvează în Evernote" />
+         <bt:Override Locale="ru" Value="Сохранить в Evernote" />
+         <bt:Override Locale="sr" Value="Save to Evernote" />
+         <bt:Override Locale="sv" Value="Spara till Evernote" />
+         <bt:Override Locale="th" Value="บันทึกลงใน Evernote" />
+         <bt:Override Locale="tr" Value="Evernote'a Kaydet" />
+         <bt:Override Locale="vi" Value="Luu vao Evernote" />
+         <bt:Override Locale="zh-CN" Value="保存到印象笔记" />
+         <bt:Override Locale="zh-TW" Value="儲存至 Evernote" />
+        </bt:String>
+         <bt:String id="residComposeSupertip" DefaultValue="Attach from Evernote">
+         <bt:Override Locale="da" Value="Vedhæft fra Evernote" />
+         <bt:Override Locale="de" Value="Anhang von Evernote" />
+         <bt:Override Locale="es" Value="Adjuntar desde Evernote" />
+         <bt:Override Locale="fi" Value="Liitä Evernotesta" />
+         <bt:Override Locale="fr" Value="Joindre à partir d'Evernote" />
+         <bt:Override Locale="hu" Value="Insert from Evernote" />
+         <bt:Override Locale="id" Value="Lampirkan dari Evernote" />
+         <bt:Override Locale="it" Value="Allega da Evernote" />
+         <bt:Override Locale="ja" Value="Evernote から添付" />
+         <bt:Override Locale="ko" Value="Evernote에서 첨부" />
+         <bt:Override Locale="nb" Value="Insert from Evernote" />
+         <bt:Override Locale="nl" Value="Insert from Evernote" />
+         <bt:Override Locale="pl" Value="Dodaj z Evernote" />
+         <bt:Override Locale="pt" Value="Insert from Evernote" />
+         <bt:Override Locale="pt-BR" Value="Anexar a partir do Evernote" />
+         <bt:Override Locale="ro" Value="Insert from Evernote" />
+         <bt:Override Locale="ru" Value="Insert from Evernote" />
+         <bt:Override Locale="sr" Value="Insert from Evernote" />
+         <bt:Override Locale="sv" Value="Bifoga från Evernote" />
+         <bt:Override Locale="th" Value="แนบจาก Evernote" />
+         <bt:Override Locale="tr" Value="Evernote'tan ekleyin" />
+         <bt:Override Locale="vi" Value="Đính kèm từ Evernote" />
+         <bt:Override Locale="zh-CN" Value="Insert from Evernote" />
+         <bt:Override Locale="zh-TW" Value="從 Evernote 附加" />
+        </bt:String>
+      </bt:LongStrings>
+    </Resources>
+
+  </VersionOverrides>
+</OfficeApp>

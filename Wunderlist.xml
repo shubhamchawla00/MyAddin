@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MailApp">
+	<Id>56d1645a-c00a-4c3b-b676-63bde48359c3</Id>
+	<Version>1.5</Version>
+	<ProviderName>Wunderlist</ProviderName>
+	<DefaultLocale>en-us</DefaultLocale>
+	<DisplayName DefaultValue="Wunderlist" />
+	<Description DefaultValue="Turn your emails into Wunderlist to-dos at the touch of a button.">
+		<Override Locale="bg-BG" Value="Превръщате своите имейли в задачи на Wunderlist с натискане на един бутон." />
+		<Override Locale="fr" Value="Convertissez vos e-mails en tâches Wunderlist d’un simple appui sur un bouton." />
+		<Override Locale="fa" Value="Turn your emails into Wunderlist to-dos at the touch of a button." />
+		<Override Locale="ja-JP" Value="ボタンを押すだけで、メールをWunderlistのタスクに変える。" />
+		<Override Locale="pt-PT" Value="Transforme os seus e-mails em tarefas do Wunderlist com um só toque." />
+		<Override Locale="sq-AL" Value="Ktheji emailet e tua në gjëra për të bërë të Wunderlist me prekjen e një butoni." />
+		<Override Locale="sv" Value="Skapa uppgifter i Wunderlist av e-postmeddelanden med en knapptryckning." />
+		<Override Locale="fi" Value="Muuta sähköpostit Wunderlist-tehtäviksi napin painalluksella." />
+		<Override Locale="de" Value="Wandle deine E-Mails per Mausklick in Wunderlist-Aufgaben um." />
+		<Override Locale="en" Value="Turn your emails into Wunderlist to-dos at the touch of a button." />
+		<Override Locale="cs-CZ" Value="Převeďte svoje e-maily na úkoly Wunderlistu stisknutím jednoho tlačítka." />
+		<Override Locale="nl" Value="Verander uw e-mailberichten Wunderlist-taken door een druk op de knop." />
+		<Override Locale="tr-TR" Value="Tek bir tıklamayla e-postalarınızı Wunderlist yapılacak işlerine dönüştürün." />
+		<Override Locale="da" Value="Konverter dine mails til Wunderlist-opgaver ved at trykke på en enkelt knap." />
+		<Override Locale="it" Value="Trasforma i tuoi messaggi email in attività di Wunderlist usando un solo pulsante." />
+		<Override Locale="no" Value="Gjør om e-post til Wunderlist-gjøremål med ett knappetrykk." />
+		<Override Locale="ar" Value="Turn your emails into Wunderlist to-dos at the touch of a button." />
+		<Override Locale="hu-HU" Value="E-mailjeidet egyetlen gombnyomással Wunderlist-teendőkké alakíthatod." />
+		<Override Locale="pt-BR" Value="Transforme os emails em tarefas pendentes no Wunderlist com o toque de um botão." />
+		<Override Locale="ro" Value="Transformați-vă mesajele de e-mail în activități de făcut Wunderlist cu o atingere de buton." />
+		<Override Locale="pl-PL" Value="Wystarczy dotknąć przycisku, aby przekształcić swoje wiadomości e-mail w zadania do wykonania aplikacji Wunderlist." />
+		<Override Locale="zh-TW" Value="只要按一下按鈕，就能將您的電子郵件轉換為 Wunderlist 待辦事項。" />
+		<Override Locale="ka" Value="Turn your emails into Wunderlist to-dos at the touch of a button." />
+		<Override Locale="zh-CN" Value="点击按钮将邮件转化为奇妙清单任务。" />
+		<Override Locale="ko" Value="단추만 누르면 전자 메일을 Wunderlist 할 일 항목으로 전환할 수 있습니다." />
+		<Override Locale="mt" Value="Biddel il-posta elettronika tiegħek f’kompiti ta’ Wunderlist b’għafsa ta’ buttuna." />
+		<Override Locale="is-IS" Value="Breyttu tölvupósti í Wunderlist-verkefni með einni hnappasnertingu." />
+		<Override Locale="sl-SI" Value="Spremenite e-poštna sporočila v opravila aplikacije Wunderlist s preprostim dotikom gumba." />
+		<Override Locale="ru" Value="Превращайте сообщения электронной почты в задачи Wunderlist одним нажатием кнопки." />
+		<Override Locale="ca" Value="Converteix els teus correus electrònics en tasques pendents de Wunderlist prement un botó." />
+		<Override Locale="grk" Value="Μετατρέψτε τα email σας σε εκκρεμότητες του Wunderlist με το πάτημα ενός κουμπιού." />
+		<Override Locale="sk-SK" Value="Premeňte svoje e-maily na úlohy Wunderlistu jediným kliknutím." />
+		<Override Locale="my" Value="Turn your emails into Wunderlist to-dos at the touch of a button." />
+		<Override Locale="he" Value="Turn your emails into Wunderlist to-dos at the touch of a button." />
+		<Override Locale="cy" Value="Trowch eich e-byst yn Wunderlist gydag un botwm." />
+		<Override Locale="th-TH" Value="เปลี่ยนอีเมลของคุณเป็นงานใน Wunderlist เพียงแตะปุ่มครั้งเดียว" />
+		<Override Locale="es" Value="Convierte tus correos electrónicos en tareas de Wunderlist con solo tocar un botón." />
+	</Description>
+	<IconUrl DefaultValue="https://www.wunderlist.com/office-add-ins/img/wl_icon_standalone.png" />
+	<HighResolutionIconUrl DefaultValue="https://www.wunderlist.com/office-add-ins/img/wl_icon_standalone_highres.png" />
+	<SupportUrl DefaultValue="https://support.wunderlist.com/" />
+	<AppDomains>
+		<AppDomain>https://www.wunderlist.com</AppDomain>
+		<AppDomain>https://a.wunderlist.com</AppDomain>
+		<AppDomain>https://long-poller.wunderlist.io</AppDomain>
+	</AppDomains>
+	<Hosts>
+		<Host Name="Mailbox" />
+	</Hosts>
+	<Requirements>
+		<Sets DefaultMinVersion="1.1">
+			<Set MinVersion="1.1" Name="Mailbox" />
+		</Sets>
+	</Requirements>
+	<FormSettings>
+		<Form xsi:type="ItemRead">
+			<DesktopSettings>
+				<SourceLocation DefaultValue="https://www.wunderlist.com/office-add-ins/html/read.html" />
+				<RequestedHeight>336</RequestedHeight>
+			</DesktopSettings>
+			<TabletSettings>
+				<SourceLocation DefaultValue="https://www.wunderlist.com/office-add-ins/html/read.html" />
+				<RequestedHeight>336</RequestedHeight>
+			</TabletSettings>
+		</Form>
+		<Form xsi:type="ItemEdit">
+			<DesktopSettings>
+				<SourceLocation DefaultValue="https://www.wunderlist.com/office-add-ins/html/compose.html" />
+			</DesktopSettings>
+			<TabletSettings>
+				<SourceLocation DefaultValue="https://www.wunderlist.com/office-add-ins/html/compose.html" />
+			</TabletSettings>
+		</Form>
+	</FormSettings>
+	<Permissions>ReadWriteMailbox</Permissions>
+	<Rule xsi:type="RuleCollection" Mode="Or">
+		<Rule xsi:type="ItemIs" ItemType="Appointment" FormType="ReadOrEdit" />
+		<Rule xsi:type="ItemIs" ItemType="Message" FormType="ReadOrEdit" />
+	</Rule>
+	<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+		<Description resid="residAppDescription" />
+		<Requirements>
+			<bt:Sets DefaultMinVersion="1.3">
+				<bt:Set Name="Mailbox" />
+			</bt:Sets>
+		</Requirements>
+		<Hosts>
+			<Host xsi:type="MailHost">
+				<DesktopFormFactor>
+					<FunctionFile resid="residUILessFunctionFileUrl" />
+					<ExtensionPoint xsi:type="MessageReadCommandSurface">
+						<OfficeTab id="TabDefault">
+							<Group id="msgReadGroup">
+								<Label resid="residAppName" />
+								<Control xsi:type="Button" id="taskPaneButton">
+									<Label resid="residTaskPaneButtonName" />
+									<Supertip>
+										<Title resid="residTPBtnSupertipTitle" />
+										<Description resid="residTPBtnSupertipDescr" />
+									</Supertip>
+									<Icon>
+										<bt:Image size="16" resid="wlLogo16" />
+										<bt:Image size="32" resid="wlLogo32" />
+										<bt:Image size="80" resid="wlLogo" />
+									</Icon>
+									<Action xsi:type="ShowTaskpane">
+										<SourceLocation resid="residTaskpaneReadUrl" />
+									</Action>
+								</Control>
+								<Control xsi:type="Button" id="quickAddButton">
+									<Label resid="residQuickAddButtonName" />
+									<Supertip>
+										<Title resid="residQuickBtnSTipL" />
+										<Description resid="residQuickBtnSTipD" />
+									</Supertip>
+									<Icon>
+										<bt:Image size="16" resid="wlLogoQuickAdd16" />
+										<bt:Image size="32" resid="wlLogoQuickAdd32" />
+										<bt:Image size="80" resid="wlLogoQuickAdd" />
+									</Icon>
+									<Action xsi:type="ExecuteFunction">
+										<FunctionName>quickAdd</FunctionName>
+									</Action>
+								</Control>
+							</Group>
+						</OfficeTab>
+					</ExtensionPoint>
+					<ExtensionPoint xsi:type="MessageComposeCommandSurface">
+						<OfficeTab id="TabDefault">
+							<Group id="msgComposeGroup">
+								<Label resid="residAppName" />
+								<Control xsi:type="Button" id="taskPaneButtonCompose">
+									<Label resid="residTaskPaneButtonName" />
+									<Supertip>
+										<Title resid="residTPBtnSTipLCom" />
+										<Description resid="residTPBtnSTipDCom" />
+									</Supertip>
+									<Icon>
+										<bt:Image size="16" resid="wlLogo16" />
+										<bt:Image size="32" resid="wlLogo32" />
+										<bt:Image size="80" resid="wlLogo" />
+									</Icon>
+									<Action xsi:type="ShowTaskpane">
+										<SourceLocation resid="residTaskpaneComposeUrl" />
+									</Action>
+								</Control>
+							</Group>
+						</OfficeTab>
+					</ExtensionPoint>
+				</DesktopFormFactor>
+			</Host>
+		</Hosts>
+		<Resources>
+			<bt:Images>
+				<bt:Image id="wlLogo16" DefaultValue="https://www.wunderlist.com/office-add-ins/img/wl_icon_standalone_16.png" />
+				<bt:Image id="wlLogo32" DefaultValue="https://www.wunderlist.com/office-add-ins/img/wl_icon_standalone_32.png" />
+				<bt:Image id="wlLogo" DefaultValue="https://www.wunderlist.com/office-add-ins/img/wl_icon_standalone.png" />
+				<bt:Image id="wlLogoQuickAdd16" DefaultValue="https://www.wunderlist.com/office-add-ins/img/wl_logo_quickadd_16.png" />
+				<bt:Image id="wlLogoQuickAdd32" DefaultValue="https://www.wunderlist.com/office-add-ins/img/wl_logo_quickadd_32.png" />
+				<bt:Image id="wlLogoQuickAdd" DefaultValue="https://www.wunderlist.com/office-add-ins/img/wl_logo_quickadd.png" />
+			</bt:Images>
+			<bt:Urls>
+				<bt:Url id="residTaskpaneReadUrl" DefaultValue="https://www.wunderlist.com/office-add-ins/html/read.html" />
+				<bt:Url id="residTaskpaneComposeUrl" DefaultValue="https://www.wunderlist.com/office-add-ins/html/compose.html" />
+				<bt:Url id="residUILessFunctionFileUrl" DefaultValue="https://www.wunderlist.com/office-add-ins/html/appcommand.html" />
+			</bt:Urls>
+			<bt:ShortStrings>
+				<bt:String id="residAppName" DefaultValue="Wunderlist" />
+				<bt:String id="residTaskPaneButtonName" DefaultValue="Wunderlist" />
+				<bt:String id="residQuickAddButtonName" DefaultValue="Quick Add">
+					<bt:Override Locale="bg-BG" Value="Бързо добавяне" />
+					<bt:Override Locale="fr" Value="Ajout rapide" />
+					<bt:Override Locale="fa" Value="Quick Add" />
+					<bt:Override Locale="ja-JP" Value="簡単追加" />
+					<bt:Override Locale="pt-PT" Value="Adição Rápida" />
+					<bt:Override Locale="sq-AL" Value="Shtimi i shpejtë" />
+					<bt:Override Locale="sv" Value="Lägg till snabbt" />
+					<bt:Override Locale="fi" Value="Pikalisäys" />
+					<bt:Override Locale="de" Value="Quick Add" />
+					<bt:Override Locale="en" Value="Quick Add" />
+					<bt:Override Locale="cs-CZ" Value="Rychlé přidání" />
+					<bt:Override Locale="nl" Value="Snel toevoegen" />
+					<bt:Override Locale="tr-TR" Value="Hızlı Ekle" />
+					<bt:Override Locale="da" Value="Tilføj hurtigt" />
+					<bt:Override Locale="it" Value="Aggiunta rapida" />
+					<bt:Override Locale="no" Value="Hurtigtillegg" />
+					<bt:Override Locale="ar" Value="Quick Add" />
+					<bt:Override Locale="hu-HU" Value="Gyors hozzáadás" />
+					<bt:Override Locale="pt-BR" Value="Adição Rápida" />
+					<bt:Override Locale="ro" Value="Adăugare rapidă" />
+					<bt:Override Locale="pl-PL" Value="Szybkie dodawanie" />
+					<bt:Override Locale="zh-TW" Value="快速新增" />
+					<bt:Override Locale="ka" Value="Quick Add" />
+					<bt:Override Locale="zh-CN" Value="快速添加" />
+					<bt:Override Locale="ko" Value="빠른 추가" />
+					<bt:Override Locale="mt" Value="Żieda Veloċi" />
+					<bt:Override Locale="is-IS" Value="Flýtiviðbót" />
+					<bt:Override Locale="sl-SI" Value="Hitro dodajanje" />
+					<bt:Override Locale="ru" Value="Быстрое добавление" />
+					<bt:Override Locale="ca" Value="Entrada Ràpida" />
+					<bt:Override Locale="grk" Value="Γρήγορη προσθήκη" />
+					<bt:Override Locale="sk-SK" Value="Rýchle pridanie" />
+					<bt:Override Locale="my" Value="Quick Add" />
+					<bt:Override Locale="he" Value="Quick Add" />
+					<bt:Override Locale="cy" Value="Ychwanegu'n Gyflym" />
+					<bt:Override Locale="th-TH" Value="เพิ่มด่วน" />
+					<bt:Override Locale="es" Value="Agregar rápidamente" />
+				</bt:String>
+				<bt:String id="residQuickBtnSTipL" DefaultValue="Wunderlist Quick Add">
+					<bt:Override Locale="bg-BG" Value="Бързо добавяне на списък на Wunderlist" />
+					<bt:Override Locale="fr" Value="Ajout rapide Wunderlist" />
+					<bt:Override Locale="fa" Value="Wunderlist Quick Add" />
+					<bt:Override Locale="ja-JP" Value="Wunderlist 簡単追加" />
+					<bt:Override Locale="pt-PT" Value="Adição Rápida do Wunderlist" />
+					<bt:Override Locale="sq-AL" Value="Shtimi i shpejtë i Wunderlist" />
+					<bt:Override Locale="sv" Value="Lägg till snabbt i Wunderlist" />
+					<bt:Override Locale="fi" Value="Wunderlistin pikalisäys" />
+					<bt:Override Locale="de" Value="Wunderlist Quick Add" />
+					<bt:Override Locale="en" Value="Wunderlist Quick Add" />
+					<bt:Override Locale="cs-CZ" Value="Rychlé přidání do Wunderlistu" />
+					<bt:Override Locale="nl" Value="Snel toevoegen van Wunderlist" />
+					<bt:Override Locale="tr-TR" Value="Wunderlist Hızlı Ekleme" />
+					<bt:Override Locale="da" Value="Tilføj hurtigt i Wunderlist" />
+					<bt:Override Locale="it" Value="Aggiunta rapida di Wunderlist" />
+					<bt:Override Locale="no" Value="Wunderlist hurtigtillegg" />
+					<bt:Override Locale="ar" Value="Wunderlist Quick Add" />
+					<bt:Override Locale="hu-HU" Value="Wunderlist Gyors hozzáadás" />
+					<bt:Override Locale="pt-BR" Value="Adição Rápida do Wunderlist" />
+					<bt:Override Locale="ro" Value="Adăugare rapidă Wunderlist" />
+					<bt:Override Locale="pl-PL" Value="Funkcja szybkiego dodawania aplikacji Wunderlist" />
+					<bt:Override Locale="zh-TW" Value="Wunderlist 快速新增" />
+					<bt:Override Locale="ka" Value="Wunderlist Quick Add" />
+					<bt:Override Locale="zh-CN" Value="奇妙清单快速添加" />
+					<bt:Override Locale="ko" Value="Wunderlist 빠른 추가" />
+					<bt:Override Locale="mt" Value="Żieda Veloċi ta’ Wunderlist" />
+					<bt:Override Locale="is-IS" Value="Flýtiviðbót Wunderlist" />
+					<bt:Override Locale="sl-SI" Value="Hitro dodajanje v aplikaciji Wunderlist" />
+					<bt:Override Locale="ru" Value="Быстрое добавление в Wunderlist" />
+					<bt:Override Locale="ca" Value="Entrada Ràpida de Wunderlist" />
+					<bt:Override Locale="grk" Value="Γρήγορη προσθήκη Wunderlist" />
+					<bt:Override Locale="sk-SK" Value="Rýchle pridanie Wunderlistu" />
+					<bt:Override Locale="my" Value="Wunderlist Quick Add" />
+					<bt:Override Locale="he" Value="Wunderlist Quick Add" />
+					<bt:Override Locale="cy" Value="Wunderlist Ychwanegiad Cyflym" />
+					<bt:Override Locale="th-TH" Value="Wunderlist เพิ่มด่วน" />
+					<bt:Override Locale="es" Value="Agregar rápidamente en Wunderlist" />
+				</bt:String>
+				<bt:String id="residTPBtnSupertipTitle" DefaultValue="Wunderlist">
+					<bt:Override Locale="bg-BG" Value="Wunderlist" />
+					<bt:Override Locale="fr" Value="Wunderlist" />
+					<bt:Override Locale="fa" Value="Wunderlist" />
+					<bt:Override Locale="ja-JP" Value="Wunderlist" />
+					<bt:Override Locale="pt-PT" Value="Wunderlist" />
+					<bt:Override Locale="sq-AL" Value="Wunderlist" />
+					<bt:Override Locale="sv" Value="Wunderlist" />
+					<bt:Override Locale="fi" Value="Wunderlist" />
+					<bt:Override Locale="de" Value="Wunderlist" />
+					<bt:Override Locale="en" Value="Wunderlist" />
+					<bt:Override Locale="cs-CZ" Value="Wunderlist" />
+					<bt:Override Locale="nl" Value="Wunderlist" />
+					<bt:Override Locale="tr-TR" Value="Wunderlist" />
+					<bt:Override Locale="da" Value="Wunderlist" />
+					<bt:Override Locale="it" Value="Wunderlist" />
+					<bt:Override Locale="no" Value="Wunderlist" />
+					<bt:Override Locale="ar" Value="Wunderlist" />
+					<bt:Override Locale="hu-HU" Value="Wunderlist" />
+					<bt:Override Locale="pt-BR" Value="Wunderlist" />
+					<bt:Override Locale="ro" Value="Wunderlist" />
+					<bt:Override Locale="pl-PL" Value="Wunderlist" />
+					<bt:Override Locale="zh-TW" Value="Wunderlist" />
+					<bt:Override Locale="ka" Value="Wunderlist" />
+					<bt:Override Locale="zh-CN" Value="奇妙清单" />
+					<bt:Override Locale="ko" Value="Wunderlist" />
+					<bt:Override Locale="mt" Value="Wunderlist" />
+					<bt:Override Locale="is-IS" Value="Wunderlist" />
+					<bt:Override Locale="sl-SI" Value="Wunderlist" />
+					<bt:Override Locale="ru" Value="Wunderlist" />
+					<bt:Override Locale="ca" Value="Wunderlist" />
+					<bt:Override Locale="grk" Value="Wunderlist" />
+					<bt:Override Locale="sk-SK" Value="Wunderlist" />
+					<bt:Override Locale="my" Value="Wunderlist" />
+					<bt:Override Locale="he" Value="Wunderlist" />
+					<bt:Override Locale="cy" Value="Wunderlist" />
+					<bt:Override Locale="th-TH" Value="Wunderlist" />
+					<bt:Override Locale="es" Value="Wunderlist" />
+				</bt:String>
+				<bt:String id="residTPBtnSTipLCom" DefaultValue="Add a Wunderlist List">
+					<bt:Override Locale="bg-BG" Value="Добавяне на списък на Wunderlist" />
+					<bt:Override Locale="fr" Value="Ajouter une liste Wunderlist" />
+					<bt:Override Locale="fa" Value="Add a Wunderlist List" />
+					<bt:Override Locale="ja-JP" Value="Wunderlistのリストに追加" />
+					<bt:Override Locale="pt-PT" Value="Adicione uma Lista do Wunderlist" />
+					<bt:Override Locale="sq-AL" Value="Shto një listë të Wunderlist" />
+					<bt:Override Locale="sv" Value="Lägg till en Wunderlist-lista" />
+					<bt:Override Locale="fi" Value="Lisää Wunderlist-luettelo" />
+					<bt:Override Locale="de" Value="Zu einer Liste in Wunderlist hinzufügen" />
+					<bt:Override Locale="en" Value="Add a Wunderlist List" />
+					<bt:Override Locale="cs-CZ" Value="Přidat seznam Wunderlistu" />
+					<bt:Override Locale="nl" Value="Een Wunderlist-lijst toevoegen" />
+					<bt:Override Locale="tr-TR" Value="Wunderlist Listesi Ekleme" />
+					<bt:Override Locale="da" Value="Tilføj en Wunderlist-liste" />
+					<bt:Override Locale="it" Value="Aggiungi a una lista di Wunderlist" />
+					<bt:Override Locale="no" Value="Legg til en Wunderlist-liste" />
+					<bt:Override Locale="ar" Value="Add a Wunderlist List" />
+					<bt:Override Locale="hu-HU" Value="Wunderlist-lista hozzáadása" />
+					<bt:Override Locale="pt-BR" Value="Adicionar uma Lista do Wunderlist" />
+					<bt:Override Locale="ro" Value="Adăugați o listă Wunderlist" />
+					<bt:Override Locale="pl-PL" Value="Dodawanie listy w aplikacji Wunderlist" />
+					<bt:Override Locale="zh-TW" Value="新增 Wunderlist 清單" />
+					<bt:Override Locale="ka" Value="Add a Wunderlist List" />
+					<bt:Override Locale="zh-CN" Value="创建一份奇妙清单" />
+					<bt:Override Locale="ko" Value="Wunderlist 목록 추가" />
+					<bt:Override Locale="mt" Value="Żid Lista ta’ Wunderlist" />
+					<bt:Override Locale="is-IS" Value="Bæta við Wunderlist-lista" />
+					<bt:Override Locale="sl-SI" Value="Dodajte seznam aplikacije Wunderlist" />
+					<bt:Override Locale="ru" Value="Добавление списка Wunderlist" />
+					<bt:Override Locale="ca" Value="Afegeix una Llista Wunderlist" />
+					<bt:Override Locale="grk" Value="Προσθήκη λίστας Wunderlist" />
+					<bt:Override Locale="sk-SK" Value="Pridanie zoznamu Wunderlistu" />
+					<bt:Override Locale="my" Value="Add a Wunderlist List" />
+					<bt:Override Locale="he" Value="Add a Wunderlist List" />
+					<bt:Override Locale="cy" Value="Ychwanegu Rhestr Wunderlist" />
+					<bt:Override Locale="th-TH" Value="เพิ่มรายการ Wunderlist" />
+					<bt:Override Locale="es" Value="Agregar una lista de Wunderlist" />
+				</bt:String>
+			</bt:ShortStrings>
+			<bt:LongStrings>
+				<bt:String id="residTPBtnSupertipDescr" DefaultValue="Turn your email into a To-do, set a reminder and send it to your chosen List">
+					<bt:Override Locale="bg-BG" Value="Превръщате своя имейл в задача, задавате напомняне и го изпращате на избран от вас списък" />
+					<bt:Override Locale="fr" Value="Convertissez votre e-mail en tâche, définissez un rappel et envoyez-le à la liste de votre choix" />
+					<bt:Override Locale="fa" Value="Turn your email into a To-do, set a reminder and send it to your chosen List" />
+					<bt:Override Locale="ja-JP" Value="メールをToDoに変え、リマインダーを設定、選択したリストへ送信。" />
+					<bt:Override Locale="pt-PT" Value="Transforme o seu e-mail numa Tarefa, defina um lembrete e envie-o para a sua Lista pretendida" />
+					<bt:Override Locale="sq-AL" Value="Ktheje emailin tënd në një gjë për të bërë, vendos një përkujtues dhe dërgoje në listën tënde të zgjedhur" />
+					<bt:Override Locale="sv" Value="Skapa en uppgift av ett e-postmeddelande, ange en påminnelse och skicka den till vald lista" />
+					<bt:Override Locale="fi" Value="Muuta sähköposti tehtäväksi, aseta muistutus ja lähetä se valitsemaasi luetteloon" />
+					<bt:Override Locale="de" Value="Wandle deine E-Mails in Aufgaben um, lege Erinnerungen an und sende sie an deine Listen" />
+					<bt:Override Locale="en" Value="Turn your email into a To-do, set a reminder and send it to your chosen List" />
+					<bt:Override Locale="cs-CZ" Value="Převeďte si e-mail na úkol, nastavte připomenutí a pošlete ho do vybraného seznamu." />
+					<bt:Override Locale="nl" Value="Verander uw e-mailbericht in een taak, stel een herinnering in en verzend deze naar uw gekozen lijst." />
+					<bt:Override Locale="tr-TR" Value="E-postanızı Yapılacak işe dönüştürün, anımsatıcı ayarlayın ve seçilen Listenize gönderin" />
+					<bt:Override Locale="da" Value="Konverter din mail til en opgave, angiv en påmindelse, og send den til din valgte liste" />
+					<bt:Override Locale="it" Value="Trasforma un messaggio email in un'attività, imposta un promemoria e invialo alla lista che preferisci" />
+					<bt:Override Locale="no" Value="Gjør om e-post til et gjøremål, angi en påminnelse og send den til den valgte listen" />
+					<bt:Override Locale="ar" Value="Turn your email into a To-do, set a reminder and send it to your chosen List" />
+					<bt:Override Locale="hu-HU" Value="E-mailjeidet teendőkké alakíthatod át, emlékeztetőt állíthatsz be, és elküldheted a kiválasztott listádba" />
+					<bt:Override Locale="pt-BR" Value="Transforme o email em uma Tarefa Pendente, defina um lembrete e envie-o para a Lista escolhida" />
+					<bt:Override Locale="ro" Value="Transformați-vă e-mailul într-o activitate de făcut, setați un memento și trimiteți-l către lista dvs. aleasă" />
+					<bt:Override Locale="pl-PL" Value="Przekształć swoją wiadomość e-mail w zadanie do wykonania, ustaw dla niego przypomnienie i wyślij go do wybranej listy" />
+					<bt:Override Locale="zh-TW" Value="將您的電子郵件轉換為待辦事項、設定提醒，並將它傳送到您選擇的清單" />
+					<bt:Override Locale="ka" Value="Turn your email into a To-do, set a reminder and send it to your chosen List" />
+					<bt:Override Locale="zh-CN" Value="将您的邮件转化为任务，设置提醒并添加到指定清单。" />
+					<bt:Override Locale="ko" Value="전자 메일을 할 일로 전환하고, 미리 알림을 설정하여 특정 목록에 전송" />
+					<bt:Override Locale="mt" Value="Biddel il-posta elettronika tiegħek f’Kompitu, issettja tfakkira u ibgħatha lil-Lista magħżula tiegħek" />
+					<bt:Override Locale="is-IS" Value="Breyttu tölvupósti í verkefni, stilltu áminningu og sendu hana á lista að eigin vali" />
+					<bt:Override Locale="sl-SI" Value="Spremenite e-poštna sporočila v opravila, nastavite opomnik in ga pošljite na izbrani seznam" />
+					<bt:Override Locale="ru" Value="Превратите сообщение электронной почты в задачу, настройте напоминание и отправьте задачу в выбранный список" />
+					<bt:Override Locale="ca" Value="Converteix el teu correu electrònic en una Tasca Pendent, estableix un recordatori i envia-ho a la llista que triïs." />
+					<bt:Override Locale="grk" Value="Μετατροπή του email σας σε εκκρεμότητα, ρύθμιση υπενθύμισης και αποστολή του στην επιλεγμένη λίστα" />
+					<bt:Override Locale="sk-SK" Value="Premeňte svoj e-mail na úlohu, nastavte pripomenutie a odošlite ho do vybratého zoznamu" />
+					<bt:Override Locale="my" Value="Turn your email into a To-do, set a reminder and send it to your chosen List" />
+					<bt:Override Locale="he" Value="Turn your email into a To-do, set a reminder and send it to your chosen List" />
+					<bt:Override Locale="cy" Value="Trowch eich e-byst yn Dasg, gosodwch nodyn atgoffa a'i hanfon at Restr o'ch dewis." />
+					<bt:Override Locale="th-TH" Value="เปลี่ยนอีเมลของคุณเป็นสิ่งที่ต้องทำ, ตั้งตัวช่วยเตือน และส่งไปยังรายการที่คุณเลือก" />
+					<bt:Override Locale="es" Value="Convierte tu correo electrónico en una tarea, establece un aviso y envíalo a la lista que elijas" />
+				</bt:String>
+				<bt:String id="residQuickBtnSTipD" DefaultValue="In a rush? Add this email straight to your Wunderlist Inbox">
+					<bt:Override Locale="bg-BG" Value="Бързате? Добавете този имейл направо във вашата папка &quot;Входящи&quot; на Wunderlist" />
+					<bt:Override Locale="fr" Value="Vous êtes pressé ? Ajoutez ce message directement à votre boîte de réception Wunderlist" />
+					<bt:Override Locale="fa" Value="In a rush? Add this email straight to your Wunderlist Inbox" />
+					<bt:Override Locale="ja-JP" Value="お急ぎですか？このメールをWunderlistの受信箱に直接追加してしまいましょう" />
+					<bt:Override Locale="pt-PT" Value="Está com pressa? Adicione este e-mail diretamente à sua Caixa de Entrada do Wunderlist" />
+					<bt:Override Locale="sq-AL" Value="Nxiton? Shtoje këtë email drejt e në kutinë tënde hyrëse të Wunderlist" />
+					<bt:Override Locale="sv" Value="Har du bråttom? Lägg till e-postmeddelandet direkt i Inkorgen i Wunderlist" />
+					<bt:Override Locale="fi" Value="Onko kiire? Lisää tähän viesti suoraan Wunderlistin Pääkansioon" />
+					<bt:Override Locale="de" Value="Hast du es eilig? Wandle E-Mails direkt in Wunderlist Aufgaben um." />
+					<bt:Override Locale="en" Value="In a rush? Add this email straight to your Wunderlist Inbox" />
+					<bt:Override Locale="cs-CZ" Value="Spěcháte? Přidejte si tento e-mail přímo do své schránky ve Wunderlistu." />
+					<bt:Override Locale="nl" Value="Hebt u haast? Dit e-mailbericht rechtstreeks aan uw Postvak IN van Wunderlist toevoegen" />
+					<bt:Override Locale="tr-TR" Value="Aceleniz mi var? Bu e-postayı doğrudan Wunderlist Gelen Kutunuza ekleyin" />
+					<bt:Override Locale="da" Value="Har du travlt? Føj denne mail direkte til din Wunderlist-indbakke" />
+					<bt:Override Locale="it" Value="Sei di fretta? Aggiungi direttamente questo messaggio email alla posta in arrivo di Wunderlist" />
+					<bt:Override Locale="no" Value="Har du det travelt? Legg til denne e-posten direkte i Wunderlist-innboksen" />
+					<bt:Override Locale="ar" Value="In a rush? Add this email straight to your Wunderlist Inbox" />
+					<bt:Override Locale="hu-HU" Value="Sietsz? Ezt az e-mailt közvetlenül hozzáadhatod a Wunderlist Beérkezők mappájához" />
+					<bt:Override Locale="pt-BR" Value="Com pressa? Adicione este email diretamente à Caixa de Entrada do Wunderlist" />
+					<bt:Override Locale="ro" Value="Vă grăbiți? Adăugați acest e-mail direct în inboxul Wunderlist" />
+					<bt:Override Locale="pl-PL" Value="Śpieszysz się? Dodaj tę wiadomość e-mail bezpośrednio do skrzynki odbiorczej aplikacji Wunderlist" />
+					<bt:Override Locale="zh-TW" Value="趕時間? 直接將此電子郵件新增到您的 Wunderlist 收件匣" />
+					<bt:Override Locale="ka" Value="In a rush? Add this email straight to your Wunderlist Inbox" />
+					<bt:Override Locale="zh-CN" Value="在赶时间吗？将这封邮件直接添加到您的奇妙清单收件箱" />
+					<bt:Override Locale="ko" Value="급한 경우 이 전자 메일을 Wunderlist 수신함에 직접 추가합니다." />
+					<bt:Override Locale="mt" Value="Mgħaġġel? Żid din il-posta elettronika direttament fil-Posta Rċivuta tiegħek ta’ Wunderlist" />
+					<bt:Override Locale="is-IS" Value="Ertu að flýta þér? Bæta þessu netfangi beint við Wunderlist-innhólfið" />
+					<bt:Override Locale="sl-SI" Value="Se vam mudi? Dodajte to e-poštno sporočilo neposredno v mapo »Prejeto« v aplikaciji Wunderlist" />
+					<bt:Override Locale="ru" Value="Спешите? Добавьте это сообщение прямо в папку «Входящие» в Wunderlist" />
+					<bt:Override Locale="ca" Value="Amb presses? Afegeix aquest correu directament a la safata d'entrada del teu Wunderlist" />
+					<bt:Override Locale="grk" Value="Βιάζεστε; Προσθέστε αυτό το email κατευθείαν στα Εισερχόμενά σας στο Wunderlist" />
+					<bt:Override Locale="sk-SK" Value="Máte naponáhlo? Pridajte tento e-mail priamo do doručenej pošty Wunderlistu" />
+					<bt:Override Locale="my" Value="In a rush? Add this email straight to your Wunderlist Inbox" />
+					<bt:Override Locale="he" Value="In a rush? Add this email straight to your Wunderlist Inbox" />
+					<bt:Override Locale="cy" Value="Ar frys? Ychwanegwch yr e-bost yma'n syth at eich blwch derbyn Wunderlist" />
+					<bt:Override Locale="th-TH" Value="กำลังรีบ? ส่งอีเมลนี้ตรงสู่กล่องขาเข้า Wunderlist ของคุณ" />
+					<bt:Override Locale="es" Value="¿Tienes prisa? Agrega este correo electrónico directamente a tu Bandeja de entrada de Wunderlist" />
+				</bt:String>
+				<bt:String id="residTPBtnSTipDCom" DefaultValue="Share a List with your colleagues, friends or family.">
+					<bt:Override Locale="bg-BG" Value="Споделяте списък с колегите, приятелите или семейството си." />
+					<bt:Override Locale="fr" Value="Partagez une liste avec vos collègues, vos amis ou les membres de votre famille." />
+					<bt:Override Locale="fa" Value="Share a List with your colleagues, friends or family." />
+					<bt:Override Locale="ja-JP" Value="知人や友だち、家族などとリストを共有する" />
+					<bt:Override Locale="pt-PT" Value="Partilhe uma Lista com os seus colegas, amigos ou família." />
+					<bt:Override Locale="sq-AL" Value="Bashkëndaj një listë me kolegët, shokët ose familjen tënde." />
+					<bt:Override Locale="sv" Value="Dela en lista med kolleger, vänner eller familj." />
+					<bt:Override Locale="fi" Value="Jaa luettelo työtovereiden, ystävien tai perheen kanssa." />
+					<bt:Override Locale="de" Value="Teile deine Listen mit Kollegen, Freunden und der Familie" />
+					<bt:Override Locale="en" Value="Share a List with your colleagues, friends or family." />
+					<bt:Override Locale="cs-CZ" Value="Seznam můžete sdílet s kolegy, přáteli nebo rodinou." />
+					<bt:Override Locale="nl" Value="Een lijst met collega's, vrienden of familie delen." />
+					<bt:Override Locale="tr-TR" Value="İş arkadaşlarınızla, arkadaşlarınızla veya ailenizle bir Listeyi paylaşın." />
+					<bt:Override Locale="da" Value="Del en liste med dine kolleger, dine venner eller din familie." />
+					<bt:Override Locale="it" Value="Condividi una lista con i tuoi colleghi, amici o familiari." />
+					<bt:Override Locale="no" Value="Del en liste med kolleger, venner og familie." />
+					<bt:Override Locale="ar" Value="Share a List with your colleagues, friends or family." />
+					<bt:Override Locale="hu-HU" Value="Listádat megoszthatod munkatársaiddal, ismerőseiddel vagy családtagjaiddal." />
+					<bt:Override Locale="pt-BR" Value="Compartilhe uma Lista com os colegas, os amigos e a família." />
+					<bt:Override Locale="ro" Value="Partajați o listă cu colegii, prietenii sau familia." />
+					<bt:Override Locale="pl-PL" Value="Udostępnij listę swoim współpracownikom, znajomym lub członkom rodziny." />
+					<bt:Override Locale="zh-TW" Value="與您的同事、朋友或家人分享清單。" />
+					<bt:Override Locale="ka" Value="Share a List with your colleagues, friends or family." />
+					<bt:Override Locale="zh-CN" Value="与您的同事、好友和家人共享清单" />
+					<bt:Override Locale="ko" Value="동료, 친구 또는 가족과 목록을 공유합니다." />
+					<bt:Override Locale="mt" Value="Ixxerja Lista mal-kollegi, il-ħbieb jew il-familja tiegħek." />
+					<bt:Override Locale="is-IS" Value="Deildu lista með samstarfsfólki, vinum eða fjölskyldumeðlimum." />
+					<bt:Override Locale="sl-SI" Value="Dajte seznam v skupno rabo s sodelavci, prijatelji ali družino." />
+					<bt:Override Locale="ru" Value="Поделитесь списком с коллегами, друзьями и близкими." />
+					<bt:Override Locale="ca" Value="Comparteix una llista amb els teus companys, amics i família " />
+					<bt:Override Locale="grk" Value="Μοιραστείτε μια λίστα με τους συναδέλφους, τους φίλους ή τους συγγενείς σας." />
+					<bt:Override Locale="sk-SK" Value="Zdieľajte zoznam s kolegami, rodinou či priateľmi." />
+					<bt:Override Locale="my" Value="Share a List with your colleagues, friends or family." />
+					<bt:Override Locale="he" Value="Share a List with your colleagues, friends or family." />
+					<bt:Override Locale="cy" Value="Rhannu Rhestr gyda'ch cydweithwyr, ffrindiau neu deulu." />
+					<bt:Override Locale="th-TH" Value="แบ่งปันรายการกับเพื่อนร่วมงาน, เพื่อน หรือครอบครัว" />
+					<bt:Override Locale="es" Value="Comparte una lista con tus compañeros de trabajo, tus amigos o tus familiares." />
+				</bt:String>
+			</bt:LongStrings>
+		</Resources>
+	</VersionOverrides>
+</OfficeApp>
