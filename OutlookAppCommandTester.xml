@@ -158,9 +158,9 @@
 			</bt:ShortStrings>
 			<bt:LongStrings>
 				<bt:String id="residAppDescription" DefaultValue="Outlook App Command Test">
-					<Override Locale="en-US" Value="Outlook App Command Test"/>
-					<Override Locale="fr-fr" Value="Outlook d'application de test de commande"/>
-					<Override Locale="ar-sa" Value="البريد الإلكتروني اختبار"/>
+					<bt:Override Locale="en-US" Value="Outlook App Command Test"/>
+					<bt:Override Locale="fr-fr" Value="Outlook d'application de test de commande"/>
+					<bt:Override Locale="ar-sa" Value="البريد الإلكتروني اختبار"/>
 				</bt:String>
 				<bt:String id="residUILBtn0SupertipDescr" DefaultValue="Run UILess">
 					<bt:Override Locale="en-US" Value="Run UILess"/>
