@@ -32,7 +32,7 @@
 		<Form xsi:type="ItemRead">
 			<DesktopSettings>
 				<SourceLocation DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/IT/AgaveAPIs.html" />
-				<RequestedHeight>150</RequestedHeight>
+				<RequestedHeight>350</RequestedHeight>
 			</DesktopSettings>
 		</Form>
 	</FormSettings>
