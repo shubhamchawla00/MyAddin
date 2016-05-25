@@ -9,37 +9,10 @@
       <task title= "Step 5 of 5. Read text from user selection in either subject or body" id="readItemSelectedDataText" description=""/>
     </tasks>
   </scenario>
-  <scenario title="Read: display reply">
+  <scenario title="Get Tokens">
     <tasks>
-      <task title= "Step 1 of 4. Display reply form" id="displayReply" description=""/>
-      <task title= "Step 2 of 4. Display reply all form" id="displayReplyAll" description=""/>
-      <task title= "Step 3 of 4. Display reply form with attachments" id="displayReplyWithAttachments" description=""/>
-      <task title= "Step 4 of 4. Display reply all form with attachments" id="displayReplyAllWithAttachments" description=""/>
-    </tasks>
-  </scenario>
-  <scenario title="Track message">
-    <tasks>
-      <task title= "Step 1 of 2. Track a message" id="trackMessage" description=""/>
-      <task title= "Step 2 of 2. Track a message and notify" id="trackMessageAndNotify" description=""/>
-    </tasks>
-  </scenario>
-  <scenario title="Get/set a subject">
-    <tasks>
-      <task title= "Step 1 of 2. Get message subject" id="getSubject" description=""/>
-      <task title= "Step 2 of 2. Set message subject (supported in compose only)" id="setSubject" description=""/>
-    </tasks>
-  </scenario>
-  <scenario title="Make EWS calls">
-    <tasks>
-      <task title= "Step 1 of 2. Dump available IDs" id="dumpIds" description=""/>
-      <task title= "Step 2 of 2. Send a message using makeEwsRequestAsync() API" id="sendMessage" description=""/>
-    </tasks>
-  </scenario>
-  <scenario title="Persist Settings" link="http://go.microsoft.com/fwlink/?LinkId=286229&amp;clcid=0x409">
-    <tasks>
-      <task title= "Step 1 of 3. Set Setting" id="setSettings" description=""/>
-      <task title= "Step 2 of 3. Get Settings" id="getSettings" description=""/>
-      <task title= "Step 3 of 3. Save Settings" id="saveSettings" description=""/>
+      <task title= "Step 1 of 2. Callback Token" id="getCallbackTokenAsync" description=""/>
+      <task title= "Step 2 of 4. User Identity Token" id="getUserIdentityTokenAsync" description=""/>
     </tasks>
   </scenario>
 </content>
