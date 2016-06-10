@@ -12,7 +12,14 @@
   <scenario title="Get Tokens">
     <tasks>
       <task title= "Step 1 of 2. Callback Token" id="getCallbackTokenAsync" description=""/>
-      <task title= "Step 2 of 4. User Identity Token" id="getUserIdentityTokenAsync" description=""/>
+      <task title= "Step 2 of 2. User Identity Token" id="getUserIdentityTokenAsync" description=""/>
+    </tasks>
+  </scenario>
+  <scenario title="Notifications Test">
+    <tasks>
+      <task title= "Step 1 of 3. Add Notifications" id="addNotifications" description=""/>
+      <task title= "Step 2 of 3. Remove Notifications" id="removeNotifications" description=""/>
+      <task title= "Step 3 of 3. Get Notifications" id="getNotifications" description=""/>
     </tasks>
   </scenario>
 </content>

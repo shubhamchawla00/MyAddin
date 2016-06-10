@@ -290,26 +290,87 @@ Office.context.roamingSettings.saveAsync(function (asyncResult) {
 
 <task id="getCallbackTokenAsync">
 
-	<![CDATA[
+<![CDATA[
 
-		Office.context.mailbox.getCallbackTokenAsync(function (asyncResult) {
-			showMessage("Token: " + asyncResult.value);
-		});
+Office.context.mailbox.getCallbackTokenAsync(function (asyncResult) {
+	showMessage("Token: " + asyncResult.value);
+});
 
-	]]>
+]]>
 
 </task>
 
 <task id="getUserIdentityTokenAsync">
 
-	<![CDATA[  
+<![CDATA[  
 
-		Office.context.mailbox.getUserIdentityTokenAsync(function (asyncResult) {
-			showMessage("Token: " + asyncResult.value);
-		});
+Office.context.mailbox.getUserIdentityTokenAsync(function (asyncResult) {
+	showMessage("Token: " + asyncResult.value);
+});
 
-	]]>
+]]>
 
 </task>
+
+<task id="addNotifications">
+
+<![CDATA[  
+
+Office.context.mailbox.item.notificationMessages.addAsync("progress", { 
+  type: "progressIndicator", 
+  message : "Progress indicator message" 
+});
+Office.context.mailbox.item.notificationMessages.addAsync("information", { 
+  type: "informationalMessage", 
+  message : "Informational message", 
+  icon : "iconid", 
+  persistent: false 
+});
+Office.context.mailbox.item.notificationMessages.addAsync("information2", { 
+  type: "informationalMessage", 
+  message : "This should not be seen after it is removed in step 2.", 
+  icon : "iconid", 
+  persistent: false 
+});
+Office.context.mailbox.item.notificationMessages.addAsync("error", { 
+  type: "errorMessage", 
+  message : "Error Message" 
+});
+
+]]>
+
+</task>
+
+
+<task id="removeNotifications">
+
+<![CDATA[  
+
+Office.context.mailbox.item.notificationMessages.removeAsync("information2");
+
+]]>
+
+</task>
+
+
+<task id="getNotifications">
+
+<![CDATA[  
+
+Office.context.mailbox.item.notificationMessages.getAllAsync(function (asyncResult) {
+	if (asyncResult.status != "failed") {
+		Office.context.mailbox.item.notificationMessages.replaceAsync( "information", { 
+			type: "informationalMessage", 
+			message : "Found " + asyncResult.value.length + " notifications.", 
+			icon : "iconid", 
+			persistent: false 
+		});
+	}
+});
+
+]]>
+
+</task>
+
 </code>
 
