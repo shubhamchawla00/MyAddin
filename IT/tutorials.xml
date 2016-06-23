@@ -22,5 +22,11 @@
       <task title= "Step 3 of 3. Get Notifications" id="getNotifications" description=""/>
     </tasks>
   </scenario>
+  <scenario title="Roaming Settings">
+    <tasks>
+      <task title= "Step 1 of 2. Set Settings" id="setSettings" description=""/>
+      <task title= "Step 2 of 2. Get Settings" id="getSettings" description=""/>
+    </tasks>
+  </scenario>
 </content>
 

@@ -372,5 +372,26 @@ Office.context.mailbox.item.notificationMessages.getAllAsync(function (asyncResu
 
 </task>
 
+<task id="setSettings">
+
+<![CDATA[  
+
+Office.context.roamingSettings.set("setting1", "Value1");
+Office.context.roamingSettings.saveAsync();
+
+]]>
+
+</task>
+
+<task id="getSettings">
+
+<![CDATA[  
+
+showMessage(Office.context.roamingSettings.get("setting1"));
+
+]]>
+
+</task>
+
 </code>
 
