@@ -249,44 +249,6 @@ if (asyncResult.status == "failed") {
 		]]>
 
 </task>
-<task id="setSettings">
-
-	<![CDATA[  
-/* Click Run Code to set a setting */
-
- // Set a setting in the mailbox
- Office.context.roamingSettings.set("mySetting", "mySetting value");
-		]]>
-
-</task>
-<task id="getSettings">
-
-	<![CDATA[  
-/* Click Run Code to get a setting */
-
-//Get a setting previously set in the mailbox
-var settingsValue = Office.context.roamingSettings.get("mySetting");
-showMessage("mySetting value is: " + settingsValue);
-		]]>
-
-</task>
-<task id="saveSettings">
-
-	<![CDATA[  
-/* Click Run Code to save a setting in the mailbox */
-
-//Save a setting in the mailbox to make it available in future sessions
-Office.context.roamingSettings.saveAsync(function (asyncResult) {
-		 if (asyncResult.status == "failed") {
-			showMessage("Action failed with error: " + asyncResult.error.message);
-		 }
-		 else {
-			 showMessage("Settings saved with status: " + asyncResult.status);
-		 }
-});
-		]]>
-
-</task>
 
 <task id="getCallbackTokenAsync">
 
@@ -377,7 +339,13 @@ Office.context.mailbox.item.notificationMessages.getAllAsync(function (asyncResu
 <![CDATA[  
 
 Office.context.roamingSettings.set("setting1", "Value1");
-Office.context.roamingSettings.saveAsync();
+Office.context.roamingSettings.saveAsync(function (asyncResult) {
+	if (asyncResult.status == "failed") {
+		showMessage("Settings save failed: " + asyncResult.error.message);
+	 } else {
+		 showMessage("Settings saved");
+	 }
+})
 
 ]]>
 
