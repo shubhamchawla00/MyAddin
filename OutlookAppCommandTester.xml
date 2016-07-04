@@ -119,6 +119,75 @@
 						</OfficeTab>		  
 					</ExtensionPoint>
 				</DesktopFormFactor>
+				<MobileFormFactor>
+					<FunctionFile resid="residUILessFunctionFileUrl" />
+						<ExtensionPoint xsi:type="MessageReadCommandSurface">
+						<!-- ExtensionPoints : MessageReadCommandSurface, MessageComposeCommandSurface, AppointmentAttendeeCommandSurface, AppointmentOrganizerCommandSurface --> 
+						<Group id="commandGroupTestID">
+							<Label resid="residAppName" />
+							
+							<Control xsi:type="Button" id="TaskPane0Btn">
+								<Label resid="residTaskPaneButton0Name" />
+								<Icon>
+									<bt:Image size="16" scale="1" resid="tp0icon" />
+									<bt:Image size="16" scale="2" resid="tp0icon" />
+									<bt:Image size="16" scale="3" resid="tp0icon" />
+									
+									<bt:Image size="32" scale="1" resid="tp0icon" />
+									<bt:Image size="32" scale="2" resid="tp0icon" />
+									<bt:Image size="32" scale="3" resid="tp0icon" />
+									
+									<bt:Image size="80" scale="1" resid="tp0icon" />
+									<bt:Image size="80" scale="2" resid="tp0icon" />
+									<bt:Image size="80" scale="3" resid="tp0icon" />
+								</Icon>
+								<Action xsi:type="ShowTaskpane">
+									<SourceLocation resid="residTaskpaneUrl" />
+								</Action>
+							</Control>
+							
+							<Control xsi:type="Button" id="UILess0Btn">
+								<Label resid="residUILessButton0Name" />
+								<Icon>
+									<bt:Image size="16" scale="1" resid="ul0icon" />
+									<bt:Image size="16" scale="2" resid="ul0icon" />
+									<bt:Image size="16" scale="3" resid="ul0icon" />
+									
+									<bt:Image size="32" scale="1" resid="ul0icon" />
+									<bt:Image size="32" scale="2" resid="ul0icon" />
+									<bt:Image size="32" scale="3" resid="ul0icon" />
+									
+									<bt:Image size="80" scale="1" resid="ul0icon" />
+									<bt:Image size="80" scale="2" resid="ul0icon" />
+									<bt:Image size="80" scale="3" resid="ul0icon" />
+								</Icon>
+								<Action xsi:type="ExecuteFunction">
+									<FunctionName>uilessAddNotification</FunctionName>
+								</Action>
+							</Control>
+							
+							<Control xsi:type="Button" id="TutorialBtn">
+								<Label resid="residTutorialButton0Name" />
+								<Icon>
+									<bt:Image size="16" scale="1" resid="tutorialicon" />
+									<bt:Image size="16" scale="2" resid="tutorialicon" />
+									<bt:Image size="16" scale="3" resid="tutorialicon" />
+									
+									<bt:Image size="32" scale="1" resid="tutorialicon" />
+									<bt:Image size="32" scale="2" resid="tutorialicon" />
+									<bt:Image size="32" scale="3" resid="tutorialicon" />
+									
+									<bt:Image size="80" scale="1" resid="tutorialicon" />
+									<bt:Image size="80" scale="2" resid="tutorialicon" />
+									<bt:Image size="80" scale="3" resid="tutorialicon" />
+								</Icon>
+								<Action xsi:type="ShowTaskpane">
+									<SourceLocation resid="residTutorialUrl" />
+								</Action>
+							</Control>
+						</Group>
+					</ExtensionPoint>
+				</MobileFormFactor>
 			</Host>
 		</Hosts>
 
