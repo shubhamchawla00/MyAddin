@@ -261,6 +261,10 @@
 		</VersionOverrides>
 		
 		<Resources>
+			<bt:Images></bt:Images>
+			<bt:Urls></bt:Urls>
+			<bt:ShortStrings></bt:ShortStrings>
+			<bt:LongStrings></bt:LongStrings>
 		</Resources>
 	</VersionOverrides>
 </OfficeApp>
