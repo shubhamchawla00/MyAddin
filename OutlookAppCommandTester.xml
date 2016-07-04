@@ -43,7 +43,7 @@
 	<DisableEntityHighlighting>true</DisableEntityHighlighting>
 	<!-- /Old schema. -->
 
-	<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+	<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_1">
 
 		<Description resid="residAppDescription" />
 
