@@ -1,14 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <content>
-  <scenario title="Compose: body APIs">
-    <tasks>
-      <task title= "Step 1 of 5. Get the type of the email body" id="bodyGetType" description=""/>
-      <task title= "Step 2 of 5. Prepend text to email body" id="bodyPrependText" description=""/>
-      <task title= "Step 3 of 5. Write text to user selection in email body" id="writeBodySelectedDataText" description=""/>
-      <task title= "Step 4 of 5. Write text to user selection in either subject or body....." id="writeItemSelectedDataText" description=""/>
-      <task title= "Step 5 of 5. Read text from user selection in either subject or body" id="readItemSelectedDataText" description=""/>
-    </tasks>
-  </scenario>
   <scenario title="Get Tokens">
     <tasks>
       <task title= "Step 1 of 2. Callback Token" id="getCallbackTokenAsync" description=""/>
