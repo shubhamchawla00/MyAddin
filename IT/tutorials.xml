@@ -28,5 +28,11 @@
       <task title= "Step 2 of 2. Get Settings" id="getSettings" description=""/>
     </tasks>
   </scenario>
+  <scenario title="Properties">
+    <tasks>
+      <task title= "Step 1 of 2. Set Properties" id="setProperties" description=""/>
+      <task title= "Step 2 of 2. Get Properties" id="getProperties" description=""/>
+    </tasks>
+  </scenario>
 </content>
 
