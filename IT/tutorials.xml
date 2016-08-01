@@ -25,5 +25,10 @@
       <task title= "Step 2 of 2. Get Properties" id="getProperties" description=""/>
     </tasks>
   </scenario>
+  <scenario title="Popup Dialog">
+    <tasks>
+      <task title= "Step 1 of 1. Open Popup Dialog" id="openPopupDialog" description=""/>
+    </tasks>
+  </scenario>
 </content>
 
