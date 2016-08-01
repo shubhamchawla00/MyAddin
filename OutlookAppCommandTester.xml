@@ -18,7 +18,11 @@
 		<Override Locale="en-US" Value="Test add-in for outlooks app commands"/>
 		<Override Locale="fr-fr" Value="Test add-in pour Outlook commandes app"/>
 		<Override Locale="ar-sa" Value="اختبار الوظيفة الإضافية في لأوامر التطبيق البريد الإلكتروني"/>
-	</Description>
+    </Description>
+    <AppDomains>
+        <AppDomain>https://bing.com</AppDomain>
+        <AppDomain>http://bing.com</AppDomain>
+    </AppDomains>
 	<IconUrl DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/aeroplane_32_32.png" />
 	<HighResolutionIconUrl DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/aeroplane_64_64.png" />
 	<Requirements>
