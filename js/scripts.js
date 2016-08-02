@@ -3,8 +3,7 @@
 var _om;
 var _item;
 
-
-document.addEventListener("DOMContentLoaded", function(event) { 
+$(document).ready(function () {
     Office.initialize = function (reason)
     {
     	_om = Office.context.mailbox;
