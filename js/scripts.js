@@ -3,11 +3,14 @@
 var _om;
 var _item;
 
-Office.initialize = function (reason)
-{
-	_om = Office.context.mailbox;
-	_item = _om.item;
-}
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+    Office.initialize = function (reason)
+    {
+    	_om = Office.context.mailbox;
+    	_item = _om.item;
+    };
+});
 
 function getSubject()
 {
