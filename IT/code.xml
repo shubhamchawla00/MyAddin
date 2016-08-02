@@ -139,7 +139,7 @@ Office.context.mailbox.item.loadCustomPropertiesAsync(function (asyncResult) {
 <task id="openPopupDialog">
 <![CDATA[  
 
-window.open("http://bing.com")
+window.open("https://dalemy.github.io/OutlookAppCommandTest/popup.html")
 
 ]]>
 </task>
