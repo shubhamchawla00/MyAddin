@@ -22,5 +22,7 @@ function uilessAddNotification(event)
 		icon : "informationicon", 
 		persistent: false 
 	});
-	event.completed(true);
+    setTimeout(function() {
+	    event.completed(true);
+    }, 10000);
 }
