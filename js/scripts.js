@@ -16,13 +16,28 @@ function getSubject()
 
 function uilessAddNotification(event)
 {
-	_item.notificationMessages.addAsync("information", { 
-		type: "informationalMessage", 
-		message : "This is a notification", 
-		icon : "informationicon", 
-		persistent: false 
+	_item.notificationMessages.addAsync("progress", { 
+		type: "progressIndicator", 
+		message : "Handling popups"
 	});
-    setTimeout(function() {
-	    event.completed(true);
-    }, 10000);
+
+	setTimeout(function () {
+		Office.context.ui.displayDialogAsync("https://bing.com", {width: 50, height: 50}, function (asyncResult) {
+			if (asyncResult.status !== Office.AsyncResultStatus.Succeeded) {
+				showMessage("Failed to show dialog: " + asyncResult.error.message);
+				return;
+			}
+		
+			_item.notificationMessages.removeAsync("progress");
+		
+			_item.notificationMessages.addAsync("information", {
+				type: "informationalMessage",
+				message: "Result: " + asyncResult.status,
+				icon: "iconid",
+				persistent: false
+			});
+
+			event.completed(true);
+		})
+	}, 10000);
 }
