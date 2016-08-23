@@ -224,8 +224,8 @@
 						<bt:Override Locale="fr-fr" Value="volet des tâches"/>
 						<bt:Override Locale="ar-sa" Value="جزء المهام"/>
 					</bt:String>
-					<bt:String id="residTutorialButton0Name" DefaultValue="Tutorial">
-						<bt:Override Locale="en-US" Value="Tutorial"/>
+					<bt:String id="residTutorialButton0Name" DefaultValue="Tests">
+						<bt:Override Locale="en-US" Value="Tests"/>
 						<bt:Override Locale="fr-fr" Value="Tutoriel"/>
 						<bt:Override Locale="ar-sa" Value="البرنامج التعليمي"/>
 					</bt:String>
