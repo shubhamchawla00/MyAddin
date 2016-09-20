@@ -34,7 +34,7 @@ Office.context.mailbox.item.notificationMessages.addAsync("progress", {
 });
 Office.context.mailbox.item.notificationMessages.addAsync("information", { 
   type: "informationalMessage", 
-  message : "Informational message", 
+  message : "Informational message (will be replaced)", 
   icon : "iconid", 
   persistent: false 
 });
@@ -59,6 +59,21 @@ Office.context.mailbox.item.notificationMessages.addAsync("error", {
 <![CDATA[  
 
 Office.context.mailbox.item.notificationMessages.removeAsync("information2");
+
+]]>
+
+</task>
+
+<task id="replaceNotifications">
+
+<![CDATA[  
+
+Office.context.mailbox.item.notificationMessages.replaceAsync("information", {
+	type: "informationalMessage", 
+	message : "This is a replacement.", 
+	icon : "iconid", 
+	persistent: false 
+});
 
 ]]>
 

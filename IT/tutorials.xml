@@ -8,9 +8,10 @@
   </scenario>
   <scenario title="Notifications Test">
     <tasks>
-      <task title= "Step 1 of 3. Add Notifications" id="addNotifications" description=""/>
-      <task title= "Step 2 of 3. Remove Notifications" id="removeNotifications" description=""/>
-      <task title= "Step 3 of 3. Get Notifications" id="getNotifications" description=""/>
+      <task title= "Step 1 of 4. Add Notifications" id="addNotifications" description=""/>
+      <task title= "Step 2 of 4. Remove Notifications" id="removeNotifications" description=""/>
+      <task title= "Step 3 of 4. Replace Notifications" id="replaceNotifications" description=""/>
+      <task title= "Step 4 of 4. Get Notifications" id="getNotifications" description=""/>
     </tasks>
   </scenario>
   <scenario title="Roaming Settings">
