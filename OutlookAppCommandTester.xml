@@ -18,13 +18,13 @@
 		<Override Locale="en-US" Value="Test add-in for outlooks app commands"/>
 		<Override Locale="fr-fr" Value="Test add-in pour Outlook commandes app"/>
 		<Override Locale="ar-sa" Value="اختبار الوظيفة الإضافية في لأوامر التطبيق البريد الإلكتروني"/>
-    </Description>
+	</Description>
 	<IconUrl DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/aeroplane_32_32.png" />
 	<HighResolutionIconUrl DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/aeroplane_64_64.png" />
-    <AppDomains>
-        <AppDomain>https://bing.com</AppDomain>
-        <AppDomain>http://bing.com</AppDomain>
-    </AppDomains>
+	<AppDomains>
+		<AppDomain>https://bing.com</AppDomain>
+		<AppDomain>http://bing.com</AppDomain>
+	</AppDomains>
 	<Requirements>
 		<Sets DefaultMinVersion="1.1">
 			<Set Name="Mailbox" />
@@ -126,65 +126,65 @@
 					</DesktopFormFactor>
 					<MobileFormFactor>
 						<FunctionFile resid="residUILessFunctionFileUrl" />
-						<ExtensionPoint xsi:type="MessageReadCommandSurface">
-							<!-- ExtensionPoints : MessageReadCommandSurface, MessageComposeCommandSurface, AppointmentAttendeeCommandSurface, AppointmentOrganizerCommandSurface --> 
+						<ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
+							<!-- ExtensionPoints : MobileMessageReadCommandSurface, MobileMessageComposeCommandSurface, MobileAppointmentAttendeeCommandSurface, MobileAppointmentOrganizerCommandSurface --> 
 							<Group id="commandGroupTestID">
 								<Label resid="residAppName" />
 				
-								<Control xsi:type="Button" id="TaskPane0Btn">
+								<Control xsi:type="MobileButton" id="TaskPane0Btn">
 									<Label resid="residTaskPaneButton0Name" />
-									<Icon>
-										<bt:Image size="16" scale="1" resid="tp0icon" />
-										<bt:Image size="16" scale="2" resid="tp0icon" />
-										<bt:Image size="16" scale="3" resid="tp0icon" />
+									<Icon xsi:type="MobileIconList">
+										<bt:Image size="25" scale="1" resid="tp0icon" />
+										<bt:Image size="25" scale="2" resid="tp0icon" />
+										<bt:Image size="25" scale="3" resid="tp0icon" />
 						
 										<bt:Image size="32" scale="1" resid="tp0icon" />
 										<bt:Image size="32" scale="2" resid="tp0icon" />
 										<bt:Image size="32" scale="3" resid="tp0icon" />
 						
-										<bt:Image size="80" scale="1" resid="tp0icon" />
-										<bt:Image size="80" scale="2" resid="tp0icon" />
-										<bt:Image size="80" scale="3" resid="tp0icon" />
+										<bt:Image size="48" scale="1" resid="tp0icon" />
+										<bt:Image size="48" scale="2" resid="tp0icon" />
+										<bt:Image size="48" scale="3" resid="tp0icon" />
 									</Icon>
 									<Action xsi:type="ShowTaskpane">
 										<SourceLocation resid="residTaskpaneUrl" />
 									</Action>
 								</Control>
 				
-								<Control xsi:type="Button" id="UILess0Btn">
+								<Control xsi:type="MobileButton" id="UILess0Btn">
 									<Label resid="residUILessButton0Name" />
-									<Icon>
-										<bt:Image size="16" scale="1" resid="ul0icon" />
-										<bt:Image size="16" scale="2" resid="ul0icon" />
-										<bt:Image size="16" scale="3" resid="ul0icon" />
+									<Icon xsi:type="MobileIconList">
+										<bt:Image size="25" scale="1" resid="ul0icon" />
+										<bt:Image size="25" scale="2" resid="ul0icon" />
+										<bt:Image size="25" scale="3" resid="ul0icon" />
 						
 										<bt:Image size="32" scale="1" resid="ul0icon" />
 										<bt:Image size="32" scale="2" resid="ul0icon" />
 										<bt:Image size="32" scale="3" resid="ul0icon" />
 						
-										<bt:Image size="80" scale="1" resid="ul0icon" />
-										<bt:Image size="80" scale="2" resid="ul0icon" />
-										<bt:Image size="80" scale="3" resid="ul0icon" />
+										<bt:Image size="48" scale="1" resid="ul0icon" />
+										<bt:Image size="48" scale="2" resid="ul0icon" />
+										<bt:Image size="48" scale="3" resid="ul0icon" />
 									</Icon>
 									<Action xsi:type="ExecuteFunction">
 										<FunctionName>uilessAddNotification</FunctionName>
 									</Action>
 								</Control>
 				
-								<Control xsi:type="Button" id="TutorialBtn">
+								<Control xsi:type="MobileButton" id="TutorialBtn">
 									<Label resid="residTutorialButton0Name" />
-									<Icon>
-										<bt:Image size="16" scale="1" resid="tutorialicon" />
-										<bt:Image size="16" scale="2" resid="tutorialicon" />
-										<bt:Image size="16" scale="3" resid="tutorialicon" />
+									<Icon xsi:type="MobileIconList">
+										<bt:Image size="25" scale="1" resid="tutorialicon" />
+										<bt:Image size="25" scale="2" resid="tutorialicon" />
+										<bt:Image size="25" scale="3" resid="tutorialicon" />
 						
 										<bt:Image size="32" scale="1" resid="tutorialicon" />
 										<bt:Image size="32" scale="2" resid="tutorialicon" />
 										<bt:Image size="32" scale="3" resid="tutorialicon" />
 						
-										<bt:Image size="80" scale="1" resid="tutorialicon" />
-										<bt:Image size="80" scale="2" resid="tutorialicon" />
-										<bt:Image size="80" scale="3" resid="tutorialicon" />
+										<bt:Image size="48" scale="1" resid="tutorialicon" />
+										<bt:Image size="48" scale="2" resid="tutorialicon" />
+										<bt:Image size="48" scale="3" resid="tutorialicon" />
 									</Icon>
 									<Action xsi:type="ShowTaskpane">
 										<SourceLocation resid="residTutorialUrl" />
