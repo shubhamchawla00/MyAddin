@@ -126,14 +126,14 @@
 					</DesktopFormFactor>
 					<MobileFormFactor>
 						<FunctionFile resid="residUILessFunctionFileUrl" />
-						<ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
+						<ExtensionPoint xsi:type="MessageReadCommandSurface">
 							<!-- ExtensionPoints : MobileMessageReadCommandSurface, MobileMessageComposeCommandSurface, MobileAppointmentAttendeeCommandSurface, MobileAppointmentOrganizerCommandSurface --> 
 							<Group id="commandGroupTestID">
 								<Label resid="residAppName" />
 				
-								<Control xsi:type="MobileButton" id="TaskPane0Btn">
+								<Control id="TaskPane0Btn">
 									<Label resid="residTaskPaneButton0Name" />
-									<Icon xsi:type="MobileIconList">
+									<Icon>
 										<bt:Image size="25" scale="1" resid="tp0icon" />
 										<bt:Image size="25" scale="2" resid="tp0icon" />
 										<bt:Image size="25" scale="3" resid="tp0icon" />
@@ -151,9 +151,9 @@
 									</Action>
 								</Control>
 				
-								<Control xsi:type="MobileButton" id="UILess0Btn">
+								<Control id="UILess0Btn">
 									<Label resid="residUILessButton0Name" />
-									<Icon xsi:type="MobileIconList">
+									<Icon>
 										<bt:Image size="25" scale="1" resid="ul0icon" />
 										<bt:Image size="25" scale="2" resid="ul0icon" />
 										<bt:Image size="25" scale="3" resid="ul0icon" />
@@ -171,9 +171,9 @@
 									</Action>
 								</Control>
 				
-								<Control xsi:type="MobileButton" id="TutorialBtn">
+								<Control id="TutorialBtn">
 									<Label resid="residTutorialButton0Name" />
-									<Icon xsi:type="MobileIconList">
+									<Icon>
 										<bt:Image size="25" scale="1" resid="tutorialicon" />
 										<bt:Image size="25" scale="2" resid="tutorialicon" />
 										<bt:Image size="25" scale="3" resid="tutorialicon" />
