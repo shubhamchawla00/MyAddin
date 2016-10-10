@@ -27,27 +27,41 @@ Office.context.mailbox.getUserIdentityTokenAsync(function (asyncResult) {
 <task id="addNotifications">
 
 <![CDATA[  
+function first() {
+  Office.context.mailbox.item.notificationMessages.addAsync("progress", { 
+    type: "progressIndicator", 
+    message : "Progress indicator message" 
+  }, second);
+}
 
-Office.context.mailbox.item.notificationMessages.addAsync("progress", { 
-  type: "progressIndicator", 
-  message : "Progress indicator message" 
-});
-Office.context.mailbox.item.notificationMessages.addAsync("information", { 
-  type: "informationalMessage", 
-  message : "Informational message (will be replaced)", 
-  icon : "iconid", 
-  persistent: false 
-});
-Office.context.mailbox.item.notificationMessages.addAsync("information2", { 
-  type: "informationalMessage", 
-  message : "This should not be seen after it is removed in step 2.", 
-  icon : "iconid", 
-  persistent: false 
-});
-Office.context.mailbox.item.notificationMessages.addAsync("error", { 
-  type: "errorMessage", 
-  message : "Error Message" 
-});
+function second() {
+  Office.context.mailbox.item.notificationMessages.addAsync("information", { 
+    type: "informationalMessage", 
+    message : "Informational message (will be replaced)", 
+    icon : "iconid", 
+    persistent: false 
+  }, third);
+}
+
+function third() {
+  Office.context.mailbox.item.notificationMessages.addAsync("information2", { 
+    type: "informationalMessage", 
+    message : "This should not be seen after it is removed in step 2.", 
+    icon : "iconid", 
+    persistent: false 
+  }, fourth);
+}
+
+function fourth() {
+  Office.context.mailbox.item.notificationMessages.addAsync("error", { 
+    type: "errorMessage", 
+    message : "Error Message" 
+  }, function() {
+    showMessage("Done");
+  });
+}
+
+first();
 
 ]]>
 
