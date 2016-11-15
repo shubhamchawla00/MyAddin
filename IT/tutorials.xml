@@ -31,5 +31,10 @@
       <task title= "Step 1 of 1. Open Popup Dialog" id="openPopupDialog" description=""/>
     </tasks>
   </scenario>
+  <scenario title="Misc">
+    <tasks>
+      <task title= "Step 1 of 1. body.getAsync" id="bodyGetAsync" description=""/>
+    </tasks>
+  </scenario>
 </content>
 

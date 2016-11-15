@@ -173,5 +173,17 @@ window.open("https://dalemy.github.io/OutlookAppCommandTest/popup.html")
 ]]>
 </task>
 
+<task id="bodyGetAsync">
+<![CDATA[  
+Office.context.mailbox.item.body.getAsync(
+  "text",
+  {},
+  function(asyncResult) {
+    showMessage(asyncResult.value);
+  }
+);
+]]>
+</task>
+
 </code>
 
