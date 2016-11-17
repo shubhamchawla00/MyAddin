@@ -1,259 +1,259 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<OfficeApp
-	xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
-	xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides"
-	xsi:type="MailApp">
-	<Id>{57C8B4A1-57EA-473B-A926-9A04EFEBBFDB}</Id>
-	<Version>1.0</Version>
-	<ProviderName>Microsoft</ProviderName>
-	<DefaultLocale>en-us</DefaultLocale>
-	<DisplayName DefaultValue="Outlook App Command Test">
-		<Override Locale="en-US" Value="Outlook App Command Test"/>
-		<Override Locale="fr-fr" Value="Outlook d'application de test de commande"/>
-		<Override Locale="ar-sa" Value="البريد الإلكتروني اختبار"/>
-	</DisplayName>
-	<Description DefaultValue="Test add-in for outlooks app commands">
-		<Override Locale="en-US" Value="Test add-in for outlooks app commands"/>
-		<Override Locale="fr-fr" Value="Test add-in pour Outlook commandes app"/>
-		<Override Locale="ar-sa" Value="اختبار الوظيفة الإضافية في لأوامر التطبيق البريد الإلكتروني"/>
-	</Description>
-	<IconUrl DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/aeroplane_32_32.png" />
-	<HighResolutionIconUrl DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/aeroplane_64_64.png" />
-	<AppDomains>
-		<AppDomain>https://bing.com</AppDomain>
-		<AppDomain>http://bing.com</AppDomain>
-	</AppDomains>
-	<Requirements>
-		<Sets DefaultMinVersion="1.1">
-			<Set Name="Mailbox" />
-		</Sets>
-	</Requirements>
-	
-	<!-- Old schema. This will be overridden by the VersionOverrides below. -->
-	<FormSettings>
-		<Form xsi:type="ItemRead">
-			<DesktopSettings>
-				<SourceLocation DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/IT/AgaveAPIs.html" />
-				<RequestedHeight>350</RequestedHeight>
-			</DesktopSettings>
-		</Form>
-	</FormSettings>
-	<Permissions>ReadItem</Permissions>
-	<Rule xsi:type="RuleCollection" Mode="Or">
-		<Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
-	</Rule>
-	<DisableEntityHighlighting>true</DisableEntityHighlighting>
-	<!-- /Old schema. -->
-
-	<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
-		<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
-
-			<Description resid="residAppDescription" />
-
-			<Requirements>
-				<bt:Sets DefaultMinVersion="1.3">
-					<bt:Set Name="Mailbox" />
-				</bt:Sets>
-			</Requirements>
-
-			<Hosts>
-				<Host xsi:type="MailHost">
-					<DesktopFormFactor>
-						<FunctionFile resid="residUILessFunctionFileUrl" />
-						<ExtensionPoint xsi:type="MessageReadCommandSurface">
-							<!-- ExtensionPoints : MessageReadCommandSurface, MessageComposeCommandSurface, AppointmentAttendeeCommandSurface, AppointmentOrganizerCommandSurface --> 
-							<OfficeTab id="TabDefault">
-								<Group id="msgreadTabMessage.grp1">
-									<Label resid="residAppName" />
-									<Tooltip resid="residAppDescription" />
-
-									<Control xsi:type="Button" id="TaskPane0Btn">
-										<Label resid="residTaskPaneButton0Name" />
-										<Tooltip resid="residTaskPaneButton0Name" />
-										<Supertip>
-											<Title resid="residTaskPaneButton0Name" />
-											<Description resid="residTPBtn0SupertipDescr" />
-										</Supertip>
-										<Icon>
-											<bt:Image size="16" resid="tp0icon" />
-											<bt:Image size="32" resid="tp0icon" />
-											<bt:Image size="80" resid="tp0icon" />
-										</Icon>
-										<Action xsi:type="ShowTaskpane">
-											<SourceLocation resid="residTaskpaneUrl" />
-										</Action>
-									</Control>
-						
-									<Control xsi:type="Button" id="UILess0Btn">
-										<Label resid="residUILessButton0Name" />
-										<Tooltip resid="residUILessButton0Name" />
-										<Supertip>
-											<Title resid="residUILessButton0Name" />
-											<Description resid="residUILBtn0SupertipDescr" />
-										</Supertip>
-										<Icon>
-											<bt:Image size="16" resid="ul0icon" />
-											<bt:Image size="32" resid="ul0icon" />
-											<bt:Image size="80" resid="ul0icon" />
-										</Icon>
-										<Action xsi:type="ExecuteFunction">
-											<FunctionName>uilessAddNotification</FunctionName>
-										</Action>
-									</Control>
-						
-									<Control xsi:type="Button" id="TutorialBtn">
-										<Label resid="residTutorialButton0Name" />
-										<Tooltip resid="residTutorialButton0Name" />
-										<Supertip>
-											<Title resid="residTutorialButton0Name" />
-											<Description resid="residTutorialBtn0SupertipDescr" />
-										</Supertip>
-										<Icon>
-											<bt:Image size="16" resid="tutorialicon" />
-											<bt:Image size="32" resid="tutorialicon" />
-											<bt:Image size="80" resid="tutorialicon" />
-										</Icon>
-										<Action xsi:type="ShowTaskpane">
-											<SourceLocation resid="residTutorialUrl" />
-										</Action>
-									</Control>
-
-								</Group>
-							</OfficeTab>		  
-						</ExtensionPoint>
-					</DesktopFormFactor>
-					<MobileFormFactor>
-						<FunctionFile resid="residUILessFunctionFileUrl" />
-						<ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
-							<!-- ExtensionPoints : MobileMessageReadCommandSurface, MobileMessageComposeCommandSurface, MobileAppointmentAttendeeCommandSurface, MobileAppointmentOrganizerCommandSurface --> 
-							<Group id="commandGroupTestID">
-								<Label resid="residAppName" />
-				
-								<Control xsi:type="MobileButton" id="TaskPane1Btn">
-									<Label resid="residTaskPaneButton0Name" />
-									<Icon xsi:type="bt:MobileIconList">
-										<bt:Image size="25" scale="1" resid="tp0icon" />
-										<bt:Image size="25" scale="2" resid="tp0icon" />
-										<bt:Image size="25" scale="3" resid="tp0icon" />
-
-										<bt:Image size="32" scale="1" resid="tp0icon" />
-										<bt:Image size="32" scale="2" resid="tp0icon" />
-										<bt:Image size="32" scale="3" resid="tp0icon" />
-
-										<bt:Image size="48" scale="1" resid="tp0icon" />
-										<bt:Image size="48" scale="2" resid="tp0icon" />
-										<bt:Image size="48" scale="3" resid="tp0icon" />
-									</Icon>
-									<Action xsi:type="ShowTaskpane">
-										<SourceLocation resid="residTaskpaneUrl" />
-									</Action>
-								</Control>
-				
-								<Control xsi:type="MobileButton" id="UILess1Btn">
-									<Label resid="residUILessButton0Name" />
-									<Icon>
-										<bt:Image size="25" scale="1" resid="ul0icon" />
-										<bt:Image size="25" scale="2" resid="ul0icon" />
-										<bt:Image size="25" scale="3" resid="ul0icon" />
-
-										<bt:Image size="32" scale="1" resid="ul0icon" />
-										<bt:Image size="32" scale="2" resid="ul0icon" />
-										<bt:Image size="32" scale="3" resid="ul0icon" />
-
-										<bt:Image size="48" scale="1" resid="ul0icon" />
-										<bt:Image size="48" scale="2" resid="ul0icon" />
-										<bt:Image size="48" scale="3" resid="ul0icon" />
-									</Icon>
-									<Action xsi:type="ExecuteFunction">
-										<FunctionName>uilessAddNotification</FunctionName>
-									</Action>
-								</Control>
-				
-								<Control xsi:type="MobileButton" id="Tutorial1Btn">
-									<Label resid="residTutorialButton0Name" />
-									<Icon>
-										<bt:Image size="25" scale="1" resid="tutorialicon" />
-										<bt:Image size="25" scale="2" resid="tutorialicon" />
-										<bt:Image size="25" scale="3" resid="tutorialicon" />
-
-										<bt:Image size="32" scale="1" resid="tutorialicon" />
-										<bt:Image size="32" scale="2" resid="tutorialicon" />
-										<bt:Image size="32" scale="3" resid="tutorialicon" />
-
-										<bt:Image size="48" scale="1" resid="tutorialicon" />
-										<bt:Image size="48" scale="2" resid="tutorialicon" />
-										<bt:Image size="48" scale="3" resid="tutorialicon" />
-									</Icon>
-									<Action xsi:type="ShowTaskpane">
-										<SourceLocation resid="residTutorialUrl" />
-									</Action>
-								</Control>
-							</Group>
-						</ExtensionPoint>
-					</MobileFormFactor>
-				</Host>
-			</Hosts>
-
-			<Resources>
-				<bt:Images>
-					<bt:Image id="tp0icon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/taskpane0_32_32.png"></bt:Image>
-					<bt:Image id="ul0icon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/uiless0_32_32.png"></bt:Image>
-					<bt:Image id="tutorialicon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/tutorial_96_96.png"></bt:Image>
-					<bt:Image id="informationicon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/informationIcon.png"></bt:Image>
-				</bt:Images>
-				<bt:Urls>
-					<bt:Url id="residUILessFunctionFileUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/uiless.html"></bt:Url>
-					<bt:Url id="residTaskpaneUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/taskpane.html"></bt:Url>
-					<bt:Url id="residTutorialUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/IT/AgaveAPIs.html"></bt:Url>
-				</bt:Urls>
-				<bt:ShortStrings>
-					<bt:String id="residAppName" DefaultValue="OlkACTest">
-						<bt:Override Locale="en-US" Value="OlkACTest"/>
-						<bt:Override Locale="fr-fr" Value="OlkACTest"/>
-						<bt:Override Locale="ar-sa" Value="OlkACTest"/>
-					</bt:String>
-					<bt:String id="residUILessButton0Name" DefaultValue="UILess">
-						<bt:Override Locale="en-US" Value="UILess"/>
-						<bt:Override Locale="fr-fr" Value="UI Moins"/>
-						<bt:Override Locale="ar-sa" Value="أقل UI"/>
-					</bt:String>
-					<bt:String id="residTaskPaneButton0Name" DefaultValue="Taskpane">
-						<bt:Override Locale="en-US" Value="Taskpane"/>
-						<bt:Override Locale="fr-fr" Value="volet des tâches"/>
-						<bt:Override Locale="ar-sa" Value="جزء المهام"/>
-					</bt:String>
-					<bt:String id="residTutorialButton0Name" DefaultValue="Tests">
-						<bt:Override Locale="en-US" Value="Tests"/>
-						<bt:Override Locale="fr-fr" Value="Tutoriel"/>
-						<bt:Override Locale="ar-sa" Value="البرنامج التعليمي"/>
-					</bt:String>
-				</bt:ShortStrings>
-				<bt:LongStrings>
-					<bt:String id="residAppDescription" DefaultValue="Outlook App Command Test">
-						<bt:Override Locale="en-US" Value="Outlook App Command Test"/>
-						<bt:Override Locale="fr-fr" Value="Outlook d'application de test de commande"/>
-						<bt:Override Locale="ar-sa" Value="البريد الإلكتروني اختبار"/>
-					</bt:String>
-					<bt:String id="residUILBtn0SupertipDescr" DefaultValue="Run UILess">
-						<bt:Override Locale="en-US" Value="Run UILess"/>
-						<bt:Override Locale="fr-fr" Value="Exécuter de UI moins"/>
-						<bt:Override Locale="ar-sa" Value="تشغيل واجهة المستخدم أقل"/>
-					</bt:String>
-					<bt:String id="residTPBtn0SupertipDescr" DefaultValue="Launch Taskpane">
-						<bt:Override Locale="en-US" Value="Launch Taskpane"/>
-						<bt:Override Locale="fr-fr" Value="Lancement volet des tâches"/>
-						<bt:Override Locale="ar-sa" Value="جزء المهام إطلاق"/>
-					</bt:String>
-					<bt:String id="residTutorialBtn0SupertipDescr" DefaultValue="Launch API Tutorial">
-						<bt:Override Locale="en-US" Value="Launch API Tutorial"/>
-						<bt:Override Locale="fr-fr" Value="API de lancement tutoriel"/>
-						<bt:Override Locale="ar-sa" Value="إطلاق API تعليمي"/>
-					</bt:String>
-				</bt:LongStrings>
-			</Resources>
-		</VersionOverrides>
-	</VersionOverrides>
-</OfficeApp>
-
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp
+	xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+	xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides"
+	xsi:type="MailApp">
+	<Id>{57C8B4A1-57EA-473B-A926-9A04EFEBBFDB}</Id>
+	<Version>1.0</Version>
+	<ProviderName>Microsoft</ProviderName>
+	<DefaultLocale>en-us</DefaultLocale>
+	<DisplayName DefaultValue="Outlook App Command Test">
+		<Override Locale="en-US" Value="Outlook App Command Test"/>
+		<Override Locale="fr-fr" Value="Outlook d'application de test de commande"/>
+		<Override Locale="ar-sa" Value="البريد الإلكتروني اختبار"/>
+	</DisplayName>
+	<Description DefaultValue="Test add-in for outlooks app commands">
+		<Override Locale="en-US" Value="Test add-in for outlooks app commands"/>
+		<Override Locale="fr-fr" Value="Test add-in pour Outlook commandes app"/>
+		<Override Locale="ar-sa" Value="اختبار الوظيفة الإضافية في لأوامر التطبيق البريد الإلكتروني"/>
+	</Description>
+	<IconUrl DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/aeroplane_32_32.png" />
+	<HighResolutionIconUrl DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/aeroplane_64_64.png" />
+	<AppDomains>
+		<AppDomain>https://bing.com</AppDomain>
+		<AppDomain>http://bing.com</AppDomain>
+	</AppDomains>
+	<Requirements>
+		<Sets DefaultMinVersion="1.1">
+			<Set Name="Mailbox" />
+		</Sets>
+	</Requirements>
+	
+	<!-- Old schema. This will be overridden by the VersionOverrides below. -->
+	<FormSettings>
+		<Form xsi:type="ItemRead">
+			<DesktopSettings>
+				<SourceLocation DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/IT/AgaveAPIs.html" />
+				<RequestedHeight>350</RequestedHeight>
+			</DesktopSettings>
+		</Form>
+	</FormSettings>
+	<Permissions>ReadItem</Permissions>
+	<Rule xsi:type="RuleCollection" Mode="Or">
+		<Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
+	</Rule>
+	<DisableEntityHighlighting>true</DisableEntityHighlighting>
+	<!-- /Old schema. -->
+
+	<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+		<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
+
+			<Description resid="residAppDescription" />
+
+			<Requirements>
+				<bt:Sets DefaultMinVersion="1.3">
+					<bt:Set Name="Mailbox" />
+				</bt:Sets>
+			</Requirements>
+
+			<Hosts>
+				<Host xsi:type="MailHost">
+					<DesktopFormFactor>
+						<FunctionFile resid="residUILessFunctionFileUrl" />
+						<ExtensionPoint xsi:type="MessageReadCommandSurface">
+							<!-- ExtensionPoints : MessageReadCommandSurface, MessageComposeCommandSurface, AppointmentAttendeeCommandSurface, AppointmentOrganizerCommandSurface --> 
+							<OfficeTab id="TabDefault">
+								<Group id="msgreadTabMessage.grp1">
+									<Label resid="residAppName" />
+									<Tooltip resid="residAppDescription" />
+
+									<Control xsi:type="Button" id="TaskPane0Btn">
+										<Label resid="residTaskPaneButton0Name" />
+										<Tooltip resid="residTaskPaneButton0Name" />
+										<Supertip>
+											<Title resid="residTaskPaneButton0Name" />
+											<Description resid="residTPBtn0SupertipDescr" />
+										</Supertip>
+										<Icon>
+											<bt:Image size="16" resid="tp0icon" />
+											<bt:Image size="32" resid="tp0icon" />
+											<bt:Image size="80" resid="tp0icon" />
+										</Icon>
+										<Action xsi:type="ShowTaskpane">
+											<SourceLocation resid="residTaskpaneUrl" />
+										</Action>
+									</Control>
+						
+									<Control xsi:type="Button" id="UILess0Btn">
+										<Label resid="residUILessButton0Name" />
+										<Tooltip resid="residUILessButton0Name" />
+										<Supertip>
+											<Title resid="residUILessButton0Name" />
+											<Description resid="residUILBtn0SupertipDescr" />
+										</Supertip>
+										<Icon>
+											<bt:Image size="16" resid="ul0icon" />
+											<bt:Image size="32" resid="ul0icon" />
+											<bt:Image size="80" resid="ul0icon" />
+										</Icon>
+										<Action xsi:type="ExecuteFunction">
+											<FunctionName>uilessAddNotification</FunctionName>
+										</Action>
+									</Control>
+						
+									<Control xsi:type="Button" id="TutorialBtn">
+										<Label resid="residTutorialButton0Name" />
+										<Tooltip resid="residTutorialButton0Name" />
+										<Supertip>
+											<Title resid="residTutorialButton0Name" />
+											<Description resid="residTutorialBtn0SupertipDescr" />
+										</Supertip>
+										<Icon>
+											<bt:Image size="16" resid="tutorialicon" />
+											<bt:Image size="32" resid="tutorialicon" />
+											<bt:Image size="80" resid="tutorialicon" />
+										</Icon>
+										<Action xsi:type="ShowTaskpane">
+											<SourceLocation resid="residTutorialUrl" />
+										</Action>
+									</Control>
+
+								</Group>
+							</OfficeTab>		  
+						</ExtensionPoint>
+					</DesktopFormFactor>
+					<MobileFormFactor>
+						<FunctionFile resid="residUILessFunctionFileUrl" />
+						<ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
+							<!-- ExtensionPoints : MobileMessageReadCommandSurface, MobileMessageComposeCommandSurface, MobileAppointmentAttendeeCommandSurface, MobileAppointmentOrganizerCommandSurface --> 
+							<Group id="commandGroupTestID">
+								<Label resid="residAppName" />
+				
+								<Control xsi:type="MobileButton" id="TaskPane1Btn">
+									<Label resid="residTaskPaneButton0Name" />
+									<Icon xsi:type="bt:MobileIconList">
+										<bt:Image size="25" scale="1" resid="tp0icon" />
+										<bt:Image size="25" scale="2" resid="tp0icon" />
+										<bt:Image size="25" scale="3" resid="tp0icon" />
+
+										<bt:Image size="32" scale="1" resid="tp0icon" />
+										<bt:Image size="32" scale="2" resid="tp0icon" />
+										<bt:Image size="32" scale="3" resid="tp0icon" />
+
+										<bt:Image size="48" scale="1" resid="tp0icon" />
+										<bt:Image size="48" scale="2" resid="tp0icon" />
+										<bt:Image size="48" scale="3" resid="tp0icon" />
+									</Icon>
+									<Action xsi:type="ShowTaskpane">
+										<SourceLocation resid="residTaskpaneUrl" />
+									</Action>
+								</Control>
+				
+								<Control xsi:type="MobileButton" id="UILess1Btn">
+									<Label resid="residUILessButton0Name" />
+									<Icon>
+										<bt:Image size="25" scale="1" resid="ul0icon" />
+										<bt:Image size="25" scale="2" resid="ul0icon" />
+										<bt:Image size="25" scale="3" resid="ul0icon" />
+
+										<bt:Image size="32" scale="1" resid="ul0icon" />
+										<bt:Image size="32" scale="2" resid="ul0icon" />
+										<bt:Image size="32" scale="3" resid="ul0icon" />
+
+										<bt:Image size="48" scale="1" resid="ul0icon" />
+										<bt:Image size="48" scale="2" resid="ul0icon" />
+										<bt:Image size="48" scale="3" resid="ul0icon" />
+									</Icon>
+									<Action xsi:type="ExecuteFunction">
+										<FunctionName>uilessAddNotification</FunctionName>
+									</Action>
+								</Control>
+				
+								<Control xsi:type="MobileButton" id="Tutorial1Btn">
+									<Label resid="residTutorialButton0Name" />
+									<Icon>
+										<bt:Image size="25" scale="1" resid="tutorialicon" />
+										<bt:Image size="25" scale="2" resid="tutorialicon" />
+										<bt:Image size="25" scale="3" resid="tutorialicon" />
+
+										<bt:Image size="32" scale="1" resid="tutorialicon" />
+										<bt:Image size="32" scale="2" resid="tutorialicon" />
+										<bt:Image size="32" scale="3" resid="tutorialicon" />
+
+										<bt:Image size="48" scale="1" resid="tutorialicon" />
+										<bt:Image size="48" scale="2" resid="tutorialicon" />
+										<bt:Image size="48" scale="3" resid="tutorialicon" />
+									</Icon>
+									<Action xsi:type="ShowTaskpane">
+										<SourceLocation resid="residTutorialUrl" />
+									</Action>
+								</Control>
+							</Group>
+						</ExtensionPoint>
+					</MobileFormFactor>
+				</Host>
+			</Hosts>
+
+			<Resources>
+				<bt:Images>
+					<bt:Image id="tp0icon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/taskpane0_32_32.png"></bt:Image>
+					<bt:Image id="ul0icon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/uiless0_32_32.png"></bt:Image>
+					<bt:Image id="tutorialicon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/tutorial_96_96.png"></bt:Image>
+					<bt:Image id="informationicon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/informationIcon.png"></bt:Image>
+				</bt:Images>
+				<bt:Urls>
+					<bt:Url id="residUILessFunctionFileUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/uiless.html"></bt:Url>
+					<bt:Url id="residTaskpaneUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/taskpane.html"></bt:Url>
+					<bt:Url id="residTutorialUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/IT/AgaveAPIs.html"></bt:Url>
+				</bt:Urls>
+				<bt:ShortStrings>
+					<bt:String id="residAppName" DefaultValue="OlkACTest">
+						<bt:Override Locale="en-US" Value="OlkACTest"/>
+						<bt:Override Locale="fr-fr" Value="OlkACTest"/>
+						<bt:Override Locale="ar-sa" Value="OlkACTest"/>
+					</bt:String>
+					<bt:String id="residUILessButton0Name" DefaultValue="UILess">
+						<bt:Override Locale="en-US" Value="UILess"/>
+						<bt:Override Locale="fr-fr" Value="UI Moins"/>
+						<bt:Override Locale="ar-sa" Value="أقل UI"/>
+					</bt:String>
+					<bt:String id="residTaskPaneButton0Name" DefaultValue="Taskpane">
+						<bt:Override Locale="en-US" Value="Taskpane"/>
+						<bt:Override Locale="fr-fr" Value="volet des tâches"/>
+						<bt:Override Locale="ar-sa" Value="جزء المهام"/>
+					</bt:String>
+					<bt:String id="residTutorialButton0Name" DefaultValue="Tests">
+						<bt:Override Locale="en-US" Value="Tests"/>
+						<bt:Override Locale="fr-fr" Value="Tutoriel"/>
+						<bt:Override Locale="ar-sa" Value="البرنامج التعليمي"/>
+					</bt:String>
+				</bt:ShortStrings>
+				<bt:LongStrings>
+					<bt:String id="residAppDescription" DefaultValue="Outlook App Command Test">
+						<bt:Override Locale="en-US" Value="Outlook App Command Test"/>
+						<bt:Override Locale="fr-fr" Value="Outlook d'application de test de commande"/>
+						<bt:Override Locale="ar-sa" Value="البريد الإلكتروني اختبار"/>
+					</bt:String>
+					<bt:String id="residUILBtn0SupertipDescr" DefaultValue="Run UILess">
+						<bt:Override Locale="en-US" Value="Run UILess"/>
+						<bt:Override Locale="fr-fr" Value="Exécuter de UI moins"/>
+						<bt:Override Locale="ar-sa" Value="تشغيل واجهة المستخدم أقل"/>
+					</bt:String>
+					<bt:String id="residTPBtn0SupertipDescr" DefaultValue="Launch Taskpane">
+						<bt:Override Locale="en-US" Value="Launch Taskpane"/>
+						<bt:Override Locale="fr-fr" Value="Lancement volet des tâches"/>
+						<bt:Override Locale="ar-sa" Value="جزء المهام إطلاق"/>
+					</bt:String>
+					<bt:String id="residTutorialBtn0SupertipDescr" DefaultValue="Launch API Tutorial">
+						<bt:Override Locale="en-US" Value="Launch API Tutorial"/>
+						<bt:Override Locale="fr-fr" Value="API de lancement tutoriel"/>
+						<bt:Override Locale="ar-sa" Value="إطلاق API تعليمي"/>
+					</bt:String>
+				</bt:LongStrings>
+			</Resources>
+		</VersionOverrides>
+	</VersionOverrides>
+</OfficeApp>
+
