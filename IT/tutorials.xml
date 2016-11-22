@@ -3,7 +3,8 @@
   <scenario title="Get Tokens">
     <tasks>
       <task title= "Step 1 of 2. Callback Token" id="getCallbackTokenAsync" description=""/>
-      <task title= "Step 2 of 2. User Identity Token" id="getUserIdentityTokenAsync" description=""/>
+      <task title= "Step 1 of 3. Callback Token (REST)" id="getCallbackTokenRESTAsync" description=""/>
+      <task title= "Step 2 of 3. User Identity Token" id="getUserIdentityTokenAsync" description=""/>
     </tasks>
   </scenario>
   <scenario title="Notifications Test">

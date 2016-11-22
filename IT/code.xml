@@ -12,6 +12,18 @@ Office.context.mailbox.getCallbackTokenAsync(function (asyncResult) {
 
 </task>
 
+<task id="getCallbackTokenRESTAsync">
+
+<![CDATA[
+
+Office.context.mailbox.getCallbackTokenAsync({"isRest":true}, function (asyncResult) {
+	showMessage("Token: " + asyncResult.value);
+});
+
+]]>
+
+</task>
+
 <task id="getUserIdentityTokenAsync">
 
 <![CDATA[  
