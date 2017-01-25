@@ -14,6 +14,20 @@ function getSubject()
 	document.getElementById("subject").innerHTML = _item.subject
 }
 
+function uilessGetSubject(event)
+{
+    var subject = Office.context.mailbox.item.subject;
+
+    Office.context.mailbox.item.notificationMessages.addAsync("subject", {
+        type: "informationalMessage",
+        icon: "iconid",
+        message: "Subject: " + subject,
+        persistent: false
+    });
+
+    event.completed();
+}
+
 function uilessAddNotification(event)
 {
 	_item.notificationMessages.addAsync("progress", { 

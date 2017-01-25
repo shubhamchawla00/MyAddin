@@ -293,7 +293,27 @@
 									<Action xsi:type="ExecuteFunction">
 										<FunctionName>uilessAddNotification</FunctionName>
 									</Action>
-								</Control>
+                                </Control>
+
+                                <Control xsi:type="MobileButton" id="UILess2Btn">
+                                    <Label resid="residUILessButton1Name" />
+                                    <Icon>
+                                        <bt:Image size="25" scale="1" resid="ul0icon" />
+                                        <bt:Image size="25" scale="2" resid="ul0icon" />
+                                        <bt:Image size="25" scale="3" resid="ul0icon" />
+
+                                        <bt:Image size="32" scale="1" resid="ul0icon" />
+                                        <bt:Image size="32" scale="2" resid="ul0icon" />
+                                        <bt:Image size="32" scale="3" resid="ul0icon" />
+
+                                        <bt:Image size="48" scale="1" resid="ul0icon" />
+                                        <bt:Image size="48" scale="2" resid="ul0icon" />
+                                        <bt:Image size="48" scale="3" resid="ul0icon" />
+                                    </Icon>
+                                    <Action xsi:type="ExecuteFunction">
+                                        <FunctionName>uilessGetSubject</FunctionName>
+                                    </Action>
+                                </Control>
 				
 								<Control xsi:type="MobileButton" id="Tutorial1Btn">
 									<Label resid="residTutorialButton0Name" />
@@ -343,6 +363,7 @@
 						<bt:Override Locale="fr-fr" Value="UI Moins"/>
 						<bt:Override Locale="ar-sa" Value="أقل UI"/>
 					</bt:String>
+                    <bt:String id="residUILessButton1Name" DefaultValue="UILess Subject"></bt:String>
 					<bt:String id="residTaskPaneButton0Name" DefaultValue="Taskpane">
 						<bt:Override Locale="en-US" Value="Taskpane"/>
 						<bt:Override Locale="fr-fr" Value="volet des tâches"/>
