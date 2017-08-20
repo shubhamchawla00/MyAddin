@@ -9,8 +9,8 @@
 	<Version>1.0</Version>
 	<ProviderName>Microsoft</ProviderName>
 	<DefaultLocale>en-us</DefaultLocale>
-	<DisplayName DefaultValue="Outlook App Command Test">
-		<Override Locale="en-US" Value="Outlook App Command Test"/>
+	<DisplayName DefaultValue="MyAddin">
+		<Override Locale="en-US" Value="MyAddin"/>
 		<Override Locale="fr-fr" Value="Outlook d'application de test de commande"/>
 		<Override Locale="ar-sa" Value="البريد الإلكتروني اختبار"/>
 	</DisplayName>
@@ -19,8 +19,8 @@
 		<Override Locale="fr-fr" Value="Test add-in pour Outlook commandes app"/>
 		<Override Locale="ar-sa" Value="اختبار الوظيفة الإضافية في لأوامر التطبيق البريد الإلكتروني"/>
 	</Description>
-	<IconUrl DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/aeroplane_32_32.png" />
-	<HighResolutionIconUrl DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/aeroplane_64_64.png" />
+	<IconUrl DefaultValue="https://shubhhack.github.io/MyAddin/img/aeroplane_32_32.png" />
+	<HighResolutionIconUrl DefaultValue="https://shubhhack.github.io/MyAddin/img/aeroplane_64_64.png" />
 	<AppDomains>
 		<AppDomain>https://bing.com</AppDomain>
 		<AppDomain>http://bing.com</AppDomain>
@@ -30,12 +30,12 @@
 			<Set Name="Mailbox" />
 		</Sets>
 	</Requirements>
-	
+
 	<!-- Old schema. This will be overridden by the VersionOverrides below. -->
 	<FormSettings>
 		<Form xsi:type="ItemRead">
 			<DesktopSettings>
-				<SourceLocation DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/IT/AgaveAPIs.html" />
+				<SourceLocation DefaultValue="https://shubhhack.github.io/MyAddin/IT/AgaveAPIs.html" />
 				<RequestedHeight>350</RequestedHeight>
 			</DesktopSettings>
 		</Form>
@@ -61,7 +61,7 @@
 				<DesktopFormFactor>
 					<FunctionFile resid="residUILessFunctionFileUrl" />
 					<ExtensionPoint xsi:type="MessageReadCommandSurface">
-						<!-- ExtensionPoints : MessageReadCommandSurface, MessageComposeCommandSurface, AppointmentAttendeeCommandSurface, AppointmentOrganizerCommandSurface --> 
+						<!-- ExtensionPoints : MessageReadCommandSurface, MessageComposeCommandSurface, AppointmentAttendeeCommandSurface, AppointmentOrganizerCommandSurface -->
 						<OfficeTab id="TabDefault">
 							<Group id="msgreadTabMessage.grp1">
 								<Label resid="residAppName" />
@@ -80,7 +80,7 @@
 										<SourceLocation resid="residTaskpaneUrl" />
 									</Action>
 								</Control>
-					
+
 								<Control xsi:type="Button" id="UILess0Btn">
 									<Label resid="residUILessButton0Name" />
 									<Supertip>
@@ -96,7 +96,7 @@
 										<FunctionName>uilessAddNotification</FunctionName>
 									</Action>
 								</Control>
-					
+
 								<Control xsi:type="Button" id="TutorialBtn">
 									<Label resid="residTutorialButton0Name" />
 									<Supertip>
@@ -114,7 +114,7 @@
 								</Control>
 
 							</Group>
-						</OfficeTab>		  
+						</OfficeTab>
 					</ExtensionPoint>
 				</DesktopFormFactor>
 			</Host>
@@ -122,15 +122,15 @@
 
 		<Resources>
 			<bt:Images>
-				<bt:Image id="tp0icon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/taskpane0_32_32.png"></bt:Image>
-				<bt:Image id="ul0icon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/uiless0_32_32.png"></bt:Image>
-				<bt:Image id="tutorialicon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/tutorial_96_96.png"></bt:Image>
-				<bt:Image id="informationicon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/informationIcon.png"></bt:Image>
+				<bt:Image id="tp0icon" DefaultValue="https://shubhhack.github.io/MyAddin/img/taskpane0_32_32.png"></bt:Image>
+				<bt:Image id="ul0icon" DefaultValue="https://shubhhack.github.io/MyAddin/img/uiless0_32_32.png"></bt:Image>
+				<bt:Image id="tutorialicon" DefaultValue="https://shubhhack.github.io/MyAddin/img/tutorial_96_96.png"></bt:Image>
+				<bt:Image id="informationicon" DefaultValue="https://shubhhack.github.io/MyAddin/img/informationIcon.png"></bt:Image>
 			</bt:Images>
 			<bt:Urls>
-				<bt:Url id="residUILessFunctionFileUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/uiless.html"></bt:Url>
-				<bt:Url id="residTaskpaneUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/taskpane.html"></bt:Url>
-				<bt:Url id="residTutorialUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/IT/AgaveAPIs.html"></bt:Url>
+				<bt:Url id="residUILessFunctionFileUrl" DefaultValue="https://shubhhack.github.io/MyAddin/uiless.html"></bt:Url>
+				<bt:Url id="residTaskpaneUrl" DefaultValue="https://shubhhack.github.io/MyAddin/taskpane.html"></bt:Url>
+				<bt:Url id="residTutorialUrl" DefaultValue="https://shubhhack.github.io/MyAddin/IT/AgaveAPIs.html"></bt:Url>
 			</bt:Urls>
 			<bt:ShortStrings>
 				<bt:String id="residAppName" DefaultValue="OlkACTest">
@@ -155,8 +155,8 @@
 				</bt:String>
 			</bt:ShortStrings>
 			<bt:LongStrings>
-				<bt:String id="residAppDescription" DefaultValue="Outlook App Command Test">
-					<bt:Override Locale="en-US" Value="Outlook App Command Test"/>
+				<bt:String id="residAppDescription" DefaultValue="MyAddin">
+					<bt:Override Locale="en-US" Value="MyAddin"/>
 					<bt:Override Locale="fr-fr" Value="Outlook d'application de test de commande"/>
 					<bt:Override Locale="ar-sa" Value="البريد الإلكتروني اختبار"/>
 				</bt:String>
@@ -176,7 +176,7 @@
 					<bt:Override Locale="ar-sa" Value="إطلاق API تعليمي"/>
 				</bt:String>
 			</bt:LongStrings>
-		</Resources>	
+		</Resources>
 		<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
 
 			<Description resid="residAppDescription" />
@@ -192,7 +192,7 @@
 					<DesktopFormFactor>
 						<FunctionFile resid="residUILessFunctionFileUrl" />
 						<ExtensionPoint xsi:type="MessageReadCommandSurface">
-							<!-- ExtensionPoints : MessageReadCommandSurface, MessageComposeCommandSurface, AppointmentAttendeeCommandSurface, AppointmentOrganizerCommandSurface --> 
+							<!-- ExtensionPoints : MessageReadCommandSurface, MessageComposeCommandSurface, AppointmentAttendeeCommandSurface, AppointmentOrganizerCommandSurface -->
 							<OfficeTab id="TabDefault">
 								<Group id="msgreadTabMessage.grp1">
 									<Label resid="residAppName" />
@@ -211,7 +211,7 @@
 											<SourceLocation resid="residTaskpaneUrl" />
 										</Action>
 									</Control>
-						
+
 									<Control xsi:type="Button" id="UILess0Btn">
 										<Label resid="residUILessButton0Name" />
 										<Supertip>
@@ -227,7 +227,7 @@
 											<FunctionName>uilessAddNotification</FunctionName>
 										</Action>
 									</Control>
-						
+
 									<Control xsi:type="Button" id="TutorialBtn">
 										<Label resid="residTutorialButton0Name" />
 										<Supertip>
@@ -245,16 +245,16 @@
 									</Control>
 
 								</Group>
-							</OfficeTab>		  
+							</OfficeTab>
 						</ExtensionPoint>
 					</DesktopFormFactor>
 					<MobileFormFactor>
 						<FunctionFile resid="residUILessFunctionFileUrl" />
 						<ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
-							<!-- ExtensionPoints : MobileMessageReadCommandSurface, MobileMessageComposeCommandSurface, MobileAppointmentAttendeeCommandSurface, MobileAppointmentOrganizerCommandSurface --> 
+							<!-- ExtensionPoints : MobileMessageReadCommandSurface, MobileMessageComposeCommandSurface, MobileAppointmentAttendeeCommandSurface, MobileAppointmentOrganizerCommandSurface -->
 							<Group id="commandGroupTestID">
 								<Label resid="residAppName" />
-				
+
 								<Control xsi:type="MobileButton" id="TaskPane1Btn">
 									<Label resid="residTaskPaneButton0Name" />
 									<Icon xsi:type="bt:MobileIconList">
@@ -274,7 +274,7 @@
 										<SourceLocation resid="residTaskpaneUrl" />
 									</Action>
 								</Control>
-				
+
 								<Control xsi:type="MobileButton" id="UILess1Btn">
 									<Label resid="residUILessButton0Name" />
 									<Icon>
@@ -314,7 +314,7 @@
                                         <FunctionName>uilessGetSubject</FunctionName>
                                     </Action>
                                 </Control>
-				
+
 								<Control xsi:type="MobileButton" id="Tutorial1Btn">
 									<Label resid="residTutorialButton0Name" />
 									<Icon>
@@ -342,15 +342,15 @@
 
 			<Resources>
 				<bt:Images>
-					<bt:Image id="tp0icon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/taskpane0_32_32.png"></bt:Image>
-					<bt:Image id="ul0icon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/uiless0_32_32.png"></bt:Image>
-					<bt:Image id="tutorialicon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/tutorial_96_96.png"></bt:Image>
-					<bt:Image id="informationicon" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/img/informationIcon.png"></bt:Image>
+					<bt:Image id="tp0icon" DefaultValue="https://shubhhack.github.io/MyAddin/img/taskpane0_32_32.png"></bt:Image>
+					<bt:Image id="ul0icon" DefaultValue="https://shubhhack.github.io/MyAddin/img/uiless0_32_32.png"></bt:Image>
+					<bt:Image id="tutorialicon" DefaultValue="https://shubhhack.github.io/MyAddin/img/tutorial_96_96.png"></bt:Image>
+					<bt:Image id="informationicon" DefaultValue="https://shubhhack.github.io/MyAddin/img/informationIcon.png"></bt:Image>
 				</bt:Images>
 				<bt:Urls>
-					<bt:Url id="residUILessFunctionFileUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/uiless.html"></bt:Url>
-					<bt:Url id="residTaskpaneUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/taskpane.html"></bt:Url>
-					<bt:Url id="residTutorialUrl" DefaultValue="https://dalemy.github.io/OutlookAppCommandTest/IT/AgaveAPIs.html"></bt:Url>
+					<bt:Url id="residUILessFunctionFileUrl" DefaultValue="https://shubhhack.github.io/MyAddin/uiless.html"></bt:Url>
+					<bt:Url id="residTaskpaneUrl" DefaultValue="https://shubhhack.github.io/MyAddin/taskpane.html"></bt:Url>
+					<bt:Url id="residTutorialUrl" DefaultValue="https://shubhhack.github.io/MyAddin/IT/AgaveAPIs.html"></bt:Url>
 				</bt:Urls>
 				<bt:ShortStrings>
 					<bt:String id="residAppName" DefaultValue="OlkACTest">
@@ -376,8 +376,8 @@
 					</bt:String>
 				</bt:ShortStrings>
 				<bt:LongStrings>
-					<bt:String id="residAppDescription" DefaultValue="Outlook App Command Test">
-						<bt:Override Locale="en-US" Value="Outlook App Command Test"/>
+					<bt:String id="residAppDescription" DefaultValue="MyAddin">
+						<bt:Override Locale="en-US" Value="MyAddin"/>
 						<bt:Override Locale="fr-fr" Value="Outlook d'application de test de commande"/>
 						<bt:Override Locale="ar-sa" Value="البريد الإلكتروني اختبار"/>
 					</bt:String>
@@ -401,4 +401,3 @@
 		</VersionOverrides>
 	</VersionOverrides>
 </OfficeApp>
-

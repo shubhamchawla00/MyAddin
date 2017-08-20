@@ -180,7 +180,7 @@ Office.context.mailbox.item.loadCustomPropertiesAsync(function (asyncResult) {
 <task id="openPopupDialog">
 <![CDATA[  
 
-window.open("https://dalemy.github.io/OutlookAppCommandTest/popup.html")
+window.open("https://shubhhack.github.io/OutlookAppCommandTest/popup.html")
 
 ]]>
 </task>
