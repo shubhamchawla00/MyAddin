@@ -21,13 +21,14 @@ Office.context.mailbox.item.body.setAsync(
  {coercionType: "text"}, 
  function (asyncResult) {
   if (asyncResult.status == "failed") {
-   console.log("Action failed with error: " + asyncResult.error.message);
+	event.completed();
+   	console.log("Action failed with error: " + asyncResult.error.message);
   } else {
-   console.log("Successfully set body text");
+	event.completed();
+   	console.log("Successfully set body text");
   }
  }
 );
-    event.completed();
 }
 
 function uilessAddNotification(event)
