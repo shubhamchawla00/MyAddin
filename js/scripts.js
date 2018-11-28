@@ -16,15 +16,17 @@ function getSubject()
 
 function uilessGetSubject(event)
 {
-    var subject = Office.context.mailbox.item.subject;
-
-    Office.context.mailbox.item.notificationMessages.addAsync("subject", {
-        type: "informationalMessage",
-        icon: "iconid",
-        message: "Subject: " + subject,
-        persistent: false
-    });
-
+Office.context.mailbox.item.body.setAsync(
+ 'Set body using UILess', 
+ {coercionType: "text"}, 
+ function (asyncResult) {
+  if (asyncResult.status == "failed") {
+   console.log("Action failed with error: " + asyncResult.error.message);
+  } else {
+   console.log("Successfully set body text");
+  }
+ }
+);
     event.completed();
 }
 
