@@ -17,7 +17,7 @@ function getSubject()
 function uilessGetSubject(event)
 {
 Office.context.mailbox.item.body.setAsync(
- 'Set body using UILess', 
+ 'To join the meeting on a computer or mobile phone: https://bluejeans.com/1094079441?src=calendarLink Want to test your video connection? https://bluejeans.com/111', 
  {coercionType: "text"}, 
  function (asyncResult) {
   if (asyncResult.status == "failed") {
